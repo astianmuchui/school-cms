@@ -1,1 +1,6 @@
-A student Portals system
+Requirements
+
+
+Sign up page
+login page
+portal page
