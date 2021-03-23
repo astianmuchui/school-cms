@@ -1,0 +1,3 @@
+<?php
+//sucess page
+?>
