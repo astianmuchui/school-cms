@@ -1,1 +1,1 @@
-Portal system.
+Login, Register and profiles system for fictional school

@@ -14,14 +14,15 @@ header{
     z-index: 999;
 }
 .title{
-    font-size: 30px;
+    width: 300px;
+    font-size: 25px;
     margin-top: 5px;
     margin-left: 3px;
 }
 header nav{
     display: inline-flex;
     position: relative;
-    margin-left: 65%;
+    margin-left: 55%;
    
 }
 *{

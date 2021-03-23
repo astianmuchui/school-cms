@@ -10,12 +10,12 @@
 <body>
     <header>
         <div class="title">
-          <?php  echo $name; ?>
+            Student Name
         </div>
         <nav>
             <ul>
                 <li><a href="#"><img src="../images/avatar.png" alt="" width="30px" height="30px"></a></li>
-                <li><a href="#"><?php  echo $name; ?></a></li>
+                <li><a href="#">Student Name</a></li>
                 
             </ul>
         </nav>
@@ -23,7 +23,7 @@
     <div class="sidebar">
         <div class="id">
             <img src="../images/avatar.png" alt="" width="100px" height="100px">
-            <h5><?php  echo $name; ?></h5>
+            <h5>Student Name</h5>
         </div> <br> <br><br>
         <div class="status">
             <div></div>

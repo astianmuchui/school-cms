@@ -12,7 +12,6 @@
     foreach($users as $user):
         $username = $user['username'];
         
-        
     endforeach;
 
 ?>

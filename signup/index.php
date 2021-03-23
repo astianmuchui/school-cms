@@ -13,7 +13,9 @@
         include '../server/database.php';
         $action = mysqli_query($conn,$query);  
         if($action){
-            header("Location: ../determiners/sucess.php");
+            require '../server/rdr.php';
+            $rdr_one = header("Location: ../portals/$name");
+
         } else{
             echo 'could not sign up';
         }
