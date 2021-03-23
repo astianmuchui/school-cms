@@ -1,2 +1,6 @@
-# school_system
-A student login and portals system for a fictional school
+Requirements
+
+
+Sign up page
+login page
+portal page

@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgba(161, 161, 161, 0.582);
+}
+header{
+    width: 100%;
+    background-color: #380303de;
+    display: inline-flex;
+    color: White;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.title{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+header nav{
+    display: inline-flex;
+    position: relative;
+    margin-left: 65%;
+   
+}
+*{
+    scroll-behavior: smooth;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    color: #fff;
+}
+header nav ul{
+    display: inline-flex;
+}
+header nav ul li{
+    padding-left: 15px;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.intro{
+    position: relative;
+    margin-left: 30%;
+    opacity: 0;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    color: black;
+    font-size: 30px;
+}
+@keyframes slideUp{
+    0%{
+        top: -50px;
+        display: flex;
+    }
+    100%{
+        opacity: 1;
+        display: flex;
+        top: 250px;
+    }
+}
