@@ -27,7 +27,7 @@
             align-items: center;
             align-content: center;
             justify-items: center;
-            background: #00030a;
+            background: #000;
         }
         *{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -38,7 +38,7 @@
         small{
             width: 30px;
             height: 30px;
-            background-color: rgb(57, 221, 85);
+            background-color: rgb(57, 221, 87);
             border-radius: 500px;
             margin-right: 20px;
         }

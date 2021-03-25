@@ -11,6 +11,8 @@
 
         foreach($users as $user):
             $username = $user['username'];
+            $adm_no = $user['adm_no'];
+            $student_email = $user['user_mail'];
             $body = '
             <?php
                 require "../../server/db_pure.php";
@@ -26,13 +28,14 @@
             </head>
             <body>
                 <header>
+            
                     <div class="title">
-                      '. $username.'
+                        School name
                     </div>
                     <nav>
                         <ul>
                             <li><a href="#"><img src="../../images/avatar.png" alt="" width="30px" height="30px"></a></li>
-                            <li><a href="#">'. $username.'</a></li>
+                            <li><a href="#">'.$username.'</a></li>
                             
                         </ul>
                     </nav>
@@ -46,10 +49,39 @@
                         <div></div>
                         <h6>Online</h6>
                     </div>
+                    <div class="details">
+                       <span>Adm no:</span>
+                        <h3> '.$adm_no.'</h3>
+                    </div>
                 </div>
+                <div class="panel">
+                    <div class="welcome">
+                        <h2>Welcome ,</h2>
+                    </div>
+                    <div class="cards-container">
+                        <div class="card">
+                            <p>Email Adress</p>
+                            <small>'.$student_email.'</small>
+                            <a href="#">change</a>
+                        </div>
+                        <div class="card">
+                            <p>Available Assignments</p>
+                            <small>25</small>
+                            <a href="#">View</a>
+            
+                        </div>
+                        <div class="card">
+                            <p>Extra Exams</p>
+                            <small>15</small>
+                            <a href="#">View</a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            
             </body>
-            </html>
-            ';
+            </html>';
             
             mkdir("../portals/$username");
             $file = fopen("../portals/$username/index.php","w");

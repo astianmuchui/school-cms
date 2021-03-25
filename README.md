@@ -1,1 +1,6 @@
-Login, Register and profiles system for fictional school
+Requirements
+
+
+Sign up page
+login page
+portal page

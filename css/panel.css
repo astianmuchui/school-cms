@@ -1,0 +1,18 @@
+form{
+    position: relative;
+    margin-top: 80px;
+    background: rgb(4, 1, 26);
+    width: 60%;
+    padding: 40px;
+    height: 450px;
+}
+input{
+    padding: 10px;
+    width: 50vw;
+    height: 50px;
+}
+label{
+    font-size: 30px;
+    font-family: Arial,Helvetica,sans-serif;
+    color: white;
+}
