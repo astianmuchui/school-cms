@@ -6,8 +6,6 @@
         $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
         mysqli_free_result($result);
         mysqli_close($conn); 
-        
-
 
         foreach($users as $user):
             $username = $user['username'];
@@ -66,14 +64,14 @@
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>
-                            <small>25</small>
-                            <a href="#">View</a>
+                            <small><?php require "../../server/assignment_numbers.php";?></small>
+                            <a href="../../assignments/">View</a>
             
                         </div>
                         <div class="card">
                             <p>Extra Exams</p>
-                            <small>15</small>
-                            <a href="#">View</a>
+                            <small><?php require"../../server/exam_numbers.php";?></small>
+                            <a href="../../exams">View</a>
                         </div>
                         
                         

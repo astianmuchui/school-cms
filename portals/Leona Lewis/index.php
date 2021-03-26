@@ -8,7 +8,7 @@
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="../css/temp.css">
+                <link rel="stylesheet" href="../../css/temp.css">
                 <title>Leona Lewis</title>
             </head>
             <body>
@@ -51,14 +51,14 @@
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>
-                            <small>25</small>
-                            <a href="#">View</a>
+                            <small><?php require "../../server/assignment_numbers.php";?></small>
+                            <a href="../../assignments/">View</a>
             
                         </div>
                         <div class="card">
                             <p>Extra Exams</p>
-                            <small>15</small>
-                            <a href="#">View</a>
+                            <small><?php require"../../server/exam_numbers.php";?></small>
+                            <a href="../../exams">View</a>
                         </div>
                         
                         
