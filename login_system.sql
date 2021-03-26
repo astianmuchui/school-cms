@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2021 at 11:04 AM
+-- Generation Time: Mar 25, 2021 at 10:35 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -39,30 +39,7 @@ CREATE TABLE `assignments` (
 --
 
 INSERT INTO `assignments` (`id`, `title`, `doc_file`, `time`) VALUES
-(1, 'Biology', 'BIOLOGY-REVISION-BOOKLET.pdf', '2021-03-25 21:08:16.106387'),
-(3, 'Chemistry Assignment', 'KCSE-FORM-3-CHEMISTRY-NOTES.pdf', '2021-03-26 08:43:39.703154'),
-(4, 'business assignment', 'BUSINESS-STUDIES-NOTES-F1-1.docx', '2021-03-26 08:47:21.782512'),
-(5, 'Biology Mocks form 3', 'Topical-Mock-Biology-questions.pdf', '2021-03-26 09:08:35.531068');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `exams`
---
-
-CREATE TABLE `exams` (
-  `id` int(255) NOT NULL,
-  `exam_name` varchar(255) NOT NULL,
-  `exam_file` varchar(255) NOT NULL,
-  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `exams`
---
-
-INSERT INTO `exams` (`id`, `exam_name`, `exam_file`, `time`) VALUES
-(1, 'End term 3 2020', 'FORM-2-BIOLOGY.docx', '2021-03-26 09:47:53.358186');
+(1, 'Biology', 'BIOLOGY-REVISION-BOOKLET.pdf', '2021-03-25 21:08:16.106387');
 
 -- --------------------------------------------------------
 
@@ -98,12 +75,6 @@ ALTER TABLE `assignments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `exams`
---
-ALTER TABLE `exams`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -117,13 +88,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `assignments`
 --
 ALTER TABLE `assignments`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `exams`
---
-ALTER TABLE `exams`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -1,6 +1,6 @@
 <?php
     require '../admin/config.php';
-    $query = 'SELECT * FROM exams';
+    $query = 'SELECT * FROM exams ORDER by id desc';
     $result = mysqli_query($conn,$query);
     $exams = mysqli_fetch_all($result,MYSQLI_ASSOC);
     mysqli_free_result($result);
@@ -33,7 +33,7 @@
                 <?php $exam_URL = '../admin/exams/'.$exam['exam_file']; ?>
             <div class="grid-item">
                 <h3><?php echo $exam['exam_name'] ?></h3> <br>
-                <img src="../images/pdf-removebg-preview.png" alt="" height="100" width="100"> <br>
+                <img src="../images/1200x630wa-removebg-preview.png" alt="" height="181" width="345"> <br>
                     <div class="border"></div> <br>
                 <a href="<?php echo $exam_URL; ?>" download>Download</a> <br>
             </div>

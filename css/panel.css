@@ -1,9 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
 header{
     width: 100%;
     background-color: #520404;
     display: inline-flex;
     color: White;
-    height: 50px;
+    height: 55px;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -17,7 +22,7 @@ header{
 header nav{
     display: inline-flex;
     position: relative;
-    margin-left: 55%;
+    margin-left: 80%;
    
 }
 *{
@@ -25,11 +30,6 @@ header nav{
     list-style-type: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: lighter;
-    text-decoration: none;
-    color: #fff;
-}
-a{
-    color: #fff;
     text-decoration: none;
 }
 header nav ul{
@@ -39,12 +39,14 @@ header nav ul li{
     padding-left: 15px;
 }
 header nav ul li a{
-    margin-top: 20px;
+    color: white;
+    position: relative;
+    top: -30px;
 }
 form{
     position: relative;
     margin-top: 80px;
-    background: rgb(4, 1, 26);
+    background: rgb(0, 0, 17);
     width: 60%;
     padding: 40px;
     height: 450px;
@@ -53,9 +55,13 @@ input{
     padding: 10px;
     width: 50vw;
     height: 50px;
+    color: black;
 }
 label{
     font-size: 30px;
     font-family: Arial,Helvetica,sans-serif;
     color: white;
+}
+#file{
+    color: beige;
 }

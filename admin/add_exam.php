@@ -55,8 +55,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
     <title>Add exam</title>
 </head>
 <body>
@@ -79,7 +80,7 @@
             <input type="text" name="exam_title"> <br> <br>
 
             <label for="price">File</label> <br><br>
-            <input type="file" name="exam_document"> <br><br>
+            <input type="file" name="exam_document" id="file"> <br><br>
             <br>
             <input type="submit" value="+ add exam" name="add" class="btn btn-primary">
         </form>

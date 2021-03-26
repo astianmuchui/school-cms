@@ -9,7 +9,7 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="stylesheet" href="../../css/temp.css">
-                <title>Leona Lewis</title>
+                <title>becky jane</title>
             </head>
             <body>
                 <header>
@@ -20,7 +20,7 @@
                     <nav>
                         <ul>
                             <li><a href="#"><img src="../../images/avatar.png" alt="" width="30px" height="30px"></a></li>
-                            <li><a href="#">Leona Lewis</a></li>
+                            <li><a href="#">becky jane</a></li>
                             
                         </ul>
                     </nav>
@@ -28,7 +28,7 @@
                 <div class="sidebar">
                     <div class="id">
                         <img src="../../images/avatar.png" alt="" width="100px" height="100px">
-                        <h5>Leona Lewis</h5>
+                        <h5>becky jane</h5>
                     </div> <br> <br><br>
                     <div class="status">
                         <div></div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="details">
                        <span>Adm no:</span>
-                        <h3> 11250</h3>
+                        <h3> 11260</h3>
                     </div>
                 </div>
                 <div class="panel">
@@ -46,7 +46,7 @@
                     <div class="cards-container">
                         <div class="card">
                             <p>Email Adress</p>
-                            <small>leonalewis6@gmail.com</small>
+                            <small>beckyjane6@gmail.com</small>
                             <a href="#">change</a>
                         </div>
                         <div class="card">

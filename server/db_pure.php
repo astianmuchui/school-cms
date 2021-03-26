@@ -11,7 +11,7 @@
     mysqli_close($conn); 
     foreach($users as $user):
         $username = $user['username'];
-        
+        $password = $user['passcode'];
     endforeach;
 
 ?>

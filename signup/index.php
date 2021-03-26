@@ -18,7 +18,7 @@
         include '../server/database.php';
         $action = mysqli_query($conn,$query);  
         if($action){
-            require '../server/rdr.php';
+            require '../server/functions.php';
             $rdr_one = header("Location: ../portals/$name");
 
         } else{

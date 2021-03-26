@@ -60,8 +60,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
     <title>Add assignment</title>
 </head>
 <body>
@@ -71,8 +72,7 @@
             </div>
             <nav>
                 <ul>
-                    
-                    <li><a href="#">Add assignment</a></li>
+                    <li><a href="#"> Add assignment</a></li>
                     
                 </ul>
             </nav>
@@ -82,7 +82,7 @@
             <label>Assignment Title</label> <br><br>
             <input type="text" name="title"> <br> <br>
             <label>File</label> <br><br>
-            <input type="file" name="pdf"> <br><br>
+            <input type="file" name="pdf" id="file"> <br><br>
             <br>
             <input type="submit" value="Upload" name="upload" class="btn btn-primary">
         </form>

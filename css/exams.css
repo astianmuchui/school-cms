@@ -1,11 +1,11 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #3b98d1;
+    background-color: #ffffff;
 }
 header{
     width: 100%;
-    background-color: #380303de;
+    background-color: #380303;
     display: inline-flex;
     color: White;
     height: 50px;
@@ -38,6 +38,9 @@ header nav ul{
 header nav ul li{
     padding-left: 15px;
 }
+header a{
+    margin-top: 20px;
+}
 .assignments-container{
     height: max-content;
     
@@ -64,9 +67,9 @@ header nav ul li{
     justify-items: center;
 }
 .grid-item{
-    height: 300px;
+    height: 340px;
     width: 300px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 3px;
     display: flex;
     flex-direction: column;
@@ -75,17 +78,21 @@ header nav ul li{
     justify-content: center;
     justify-items: center;
 }
-.grid-item a{
+.grid-item h3{
     color: black;
-    background-color: #fff;
-    border: 1px solid white;
+}
+.grid-item a{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 100px;
     padding: 10px 20px;
 }
 .grid-item a:hover{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(20, 20, 20, 0.8);
 }
 .grid-item .border{
     width: 80%;
-    border: 1px solid #fafafa;
+    border: 1px solid #000000;
+    margin: 5px 0;
 }

@@ -1,6 +1,6 @@
 <?php
     require '../admin/config.php';
-    $query = 'SELECT * FROM assignments';
+    $query = 'SELECT * FROM assignments ORDER BY id desc';
     $result = mysqli_query($conn,$query);
     $assignments = mysqli_fetch_all($result,MYSQLI_ASSOC);
     mysqli_free_result($result);
