@@ -1,6 +1,11 @@
 <?php
+    require '../admin/config.php';
+    $test = "jane doe";
+
+    
     function login($user_name,$pass_word){
-        require '../server/db_pure.php';
+        require '../admin/config.php';
+
         global $errors;
         $errors = array();
         if(empty($user_name)){
@@ -10,16 +15,29 @@
             echo 'Password cannot be blank <br>';
         }
             if(!empty($user_name) && !empty($pass_word)){
-
+         
+                $query = "SELECT * FROM users";
+                $result = mysqli_query($conn,$query);
+                $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
                 
-            if(($user_name === $username) && ($pass_word === $password)){
+                foreach($users as $user):
+                    $username = $user['username'];
+                    $password = $user['passcode'];
+                
+                if(($user_name == $username) && ($pass_word == $password)){
+                    
                 header("location: ../portals/$user_name");
-                // echo 'Matches with database';
             }else{
-                echo 'Doesnt match with database';
+                
             }
+        endforeach;
+        mysqli_free_result($result);
+                mysqli_close($conn);   
         }
+
+
     }
+
 
     if(isset($_POST['submit'])){
         $user_name = $_POST['username'];

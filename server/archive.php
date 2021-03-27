@@ -75,7 +75,7 @@
         mysqli_free_result($result);
         mysqli_close($conn); 
         
-
+        
 
         foreach($users as $user):
             $username = $user['username'];
@@ -144,4 +144,5 @@
         mysqli_free_result($result);
         mysqli_close($conn); 
     }
+
 ?>

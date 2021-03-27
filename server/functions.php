@@ -11,9 +11,11 @@
             $username = $user['username'];
             $adm_no = $user['adm_no'];
             $student_email = $user['user_mail'];
+            $user_id = $user['user_id'];
             $body = '
             <?php
                 require "../../server/db_pure.php";
+        
             ?>
             <!DOCTYPE html>
             <html lang="en">
@@ -21,6 +23,7 @@
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
                 <link rel="stylesheet" href="../../css/temp.css">
                 <title>'.$username.'</title>
             </head>
@@ -34,6 +37,8 @@
                         <ul>
                             <li><a href="#"><img src="../../images/avatar.png" alt="" width="30px" height="30px"></a></li>
                             <li><a href="#">'.$username.'</a></li>
+                             <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>   
+
                             
                         </ul>
                     </nav>
@@ -51,6 +56,15 @@
                        <span>Adm no:</span>
                         <h3> '.$adm_no.'</h3>
                     </div>
+                    <div class="back">
+                    <a href="#">  Go  back to website <i class="fas fa-arrow-right"></i></a>
+                </div> <br> <br>
+                <div class="back">
+                    <a href="#">Received Messages</a>
+                </div> <br> <br>
+                <div class="back">
+                    <a href="#">Make suggestion</a>
+                </div>
                 </div>
                 <div class="panel">
                     <div class="welcome">
@@ -59,8 +73,9 @@
                     <div class="cards-container">
                         <div class="card">
                             <p>Email Adress</p>
+
                             <small>'.$student_email.'</small>
-                            <a href="#">change</a>
+                            <a href="../../control/edit_email.php?id=<?php echo $user["user_id"];?>">change</a>
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>

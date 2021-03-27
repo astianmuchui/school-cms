@@ -51,6 +51,8 @@
         $document = $_FILES['pdf']['name'];
         //call function to insert
         insert($title,$document);
+        require('../handlers/assignment_mail.php');
+        NotifyStudents();
     }
 ?>
 <!DOCTYPE html>
@@ -66,19 +68,8 @@
     <title>Add assignment</title>
 </head>
 <body>
-<header>     
-            <div class="title">
-                School name
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#"> Add assignment</a></li>
-                    
-                </ul>
-            </nav>
-        </header>
 <center>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data" class="bg-dark">
             <label>Assignment Title</label> <br><br>
             <input type="text" name="title"> <br> <br>
             <label>File</label> <br><br>

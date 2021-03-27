@@ -61,21 +61,9 @@
     <title>Add exam</title>
 </head>
 <body>
-<header>
-            
-            <div class="title">
-                School name
-            </div>
-            <nav>
-                <ul>
-                    
-                    <li><a href="#">Add Exam</a></li>
-                    
-                </ul>
-            </nav>
-        </header>
+
 <center>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data" class="bg-dark">
             <label>Exam title</label> <br><br>
             <input type="text" name="exam_title"> <br> <br>
 
@@ -85,5 +73,6 @@
             <input type="submit" value="+ add exam" name="add" class="btn btn-primary">
         </form>
         </center>
+
 </body>
 </html>
