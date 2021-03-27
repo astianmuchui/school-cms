@@ -1,4 +1,5 @@
 <?php
+    //Edit Email
     require '../admin/config.php';
     $id = $_GET['id'];
     $query = "SELECT * FROM users WHERE users.user_id = $id";
@@ -15,7 +16,7 @@
         $query = "UPDATE `users` SET `user_mail` = '$newEmail' WHERE `users`.`user_id` = $id";
         $change =  mysqli_query($conn,$query);
         if($change){
-            echo "True";
+            echo "Email changed";
         }else{
             return false;
         }
