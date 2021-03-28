@@ -1,6 +1,6 @@
 <?php
     function createportal(){
-        include 'database.php';
+        include '../admin/config.php';
         $query = "SELECT * FROM users";
         $result = mysqli_query($conn,$query);
         $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -25,7 +25,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
                 <link rel="stylesheet" href="../../css/temp.css">
-                <title>'.$username.'</title>
+                <title>'.$username.' | '.$user_id.'</title>
             </head>
             <body>
                 <header>
@@ -75,7 +75,7 @@
                             <p>Email Adress</p>
 
                             <small>'.$student_email.'</small>
-                            <a href="../../control/edit_email.php?id=<?php echo $user["user_id"];?>">change</a>
+                            <a href="../../control/edit_email.php?id='.$user_id.'">change</a>
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>

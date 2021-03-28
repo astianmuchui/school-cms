@@ -21,8 +21,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle btn btn-primary" id="open" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Manage school</a>
                     <div class="dropdown-menu" id="dropdown">
-                      <a class="dropdown-item" href="#" id="exams">Manage exams</a>
-                      <a class="dropdown-item" href="#" id="assignments">Manage Assignments</a>
+                      <a class="dropdown-item" href="#" id="exams_opener">Manage exams</a>
+                      <a class="dropdown-item" href="#" id="assignments_opener">Manage Assignments</a>
                       <a class="dropdown-item" href="#">View Students database</a>
                       <a class="dropdown-item" href="#">Message students</a>
                       <a class="dropdown-item" href="#"></a>
@@ -57,9 +57,9 @@
         </div>
       </div>
       <div class="left-card" id="left-card">
-        <?php require "./add_exam.php"; ?>
-      </div>
-      <script src="../javascript/switch.js"></script>
+        <div class="exams_container" id="exams_container"><?php require "./add_exam.php"; ?>  </div> 
+       </div>
+      <!-- <script src="../javascript/switch.js"></script> -->
       <script src="../javascript/open_dropdown.js"></script>
 </body>
 </html>

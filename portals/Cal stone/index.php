@@ -1,6 +1,7 @@
 
             <?php
                 require "../../server/db_pure.php";
+        
             ?>
             <!DOCTYPE html>
             <html lang="en">
@@ -8,8 +9,9 @@
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
                 <link rel="stylesheet" href="../../css/temp.css">
-                <title>john doe</title>
+                <title>Cal stone | 14</title>
             </head>
             <body>
                 <header>
@@ -20,7 +22,9 @@
                     <nav>
                         <ul>
                             <li><a href="#"><img src="../../images/avatar.png" alt="" width="30px" height="30px"></a></li>
-                            <li><a href="#">john doe</a></li>
+                            <li><a href="#">Cal stone</a></li>
+                             <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>   
+
                             
                         </ul>
                     </nav>
@@ -28,7 +32,7 @@
                 <div class="sidebar">
                     <div class="id">
                         <img src="../../images/avatar.png" alt="" width="100px" height="100px">
-                        <h5>john doe</h5>
+                        <h5>Cal stone</h5>
                     </div> <br> <br><br>
                     <div class="status">
                         <div></div>
@@ -36,8 +40,17 @@
                     </div>
                     <div class="details">
                        <span>Adm no:</span>
-                        <h3> 4560</h3>
+                        <h3> 8280</h3>
                     </div>
+                    <div class="back">
+                    <a href="#">  Go  back to website <i class="fas fa-arrow-right"></i></a>
+                </div> <br> <br>
+                <div class="back">
+                    <a href="#">Received Messages</a>
+                </div> <br> <br>
+                <div class="back">
+                    <a href="#">Make suggestion</a>
+                </div>
                 </div>
                 <div class="panel">
                     <div class="welcome">
@@ -46,8 +59,9 @@
                     <div class="cards-container">
                         <div class="card">
                             <p>Email Adress</p>
-                            <small>johndoe@gmail.com</small>
-                            <a href="#">change</a>
+
+                            <small>michaela8@gmail.com</small>
+                            <a href="../../control/edit_email.php?id=14">change</a>
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>

@@ -1,22 +1,24 @@
 <?php
-    //Edit Email
     require '../admin/config.php';
     $id = $_GET['id'];
     $query = "SELECT * FROM users WHERE users.user_id = $id";
         $result = mysqli_query($conn,$query);
-        $post = mysqli_fetch_all($result,MYSQLI_ASSOC);
-
+        $post = mysqli_fetch_assoc($result);
         mysqli_free_result($result);
         mysqli_close($conn); 
-    
-
-    if(isset($_POST['edit'])){
+        // echo $post['usernname'];
+        $username = $post['username'];
+        if(isset($_POST['edit'])){
         $newEmail = $_POST['newEmail'];
         require '../admin/config.php';
         $query = "UPDATE `users` SET `user_mail` = '$newEmail' WHERE `users`.`user_id` = $id";
         $change =  mysqli_query($conn,$query);
         if($change){
-            echo "Email changed";
+            if(require '../server/update_profile.php'){
+                header("Location: ../portals/$username");
+            }
+            
+            // echo "Email changed ,Please Wait as we edit your profile";
         }else{
             return false;
         }

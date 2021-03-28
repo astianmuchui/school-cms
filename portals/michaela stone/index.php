@@ -11,7 +11,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
                 <link rel="stylesheet" href="../../css/temp.css">
-                <title>michaela stone</title>
+                <title>michaela stone | 2</title>
             </head>
             <body>
                 <header>
@@ -60,8 +60,8 @@
                         <div class="card">
                             <p>Email Adress</p>
 
-                            <small>markanthony3@gmail.com</small>
-                            <a href="../../control/edit_email.php?id=<?php echo $user["user_id"];?>">change</a>
+                            <small>michaela8@gmail.com</small>
+                            <a href="../../control/edit_email.php?id=2">change</a>
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>
