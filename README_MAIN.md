@@ -30,7 +30,7 @@ A school management system that allows students to do the following:
   
   
   
-  ===================================================================
+  ====================================================================
   
   
   How it works
