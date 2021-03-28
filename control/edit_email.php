@@ -8,6 +8,7 @@
         mysqli_close($conn); 
         // echo $post['usernname'];
         $username = $post['username'];
+        $usermail = $post['user_maill'];
         if(isset($_POST['edit'])){
         $newEmail = $_POST['newEmail'];
         require '../admin/config.php';
@@ -42,7 +43,7 @@
         <form action="edit_email.php?id=<?php echo $id; ?>" method="post">
      <div class="form-group">
          <label>Enter New Email</label>
-            <input type="email" name="newEmail" id="" placeholder="Enter new email here" class="form-control"> 
+            <input type="email" name="newEmail" id="" placeholder="Enter new email here" class="form-control" value="<?php echo $usermail;?>"> 
         </div>
         <div class="form-group">
             <input type="submit" value="Submit" class="form-control btn btn-dark" name="edit">
