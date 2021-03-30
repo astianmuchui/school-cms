@@ -8,7 +8,7 @@
         mysqli_close($conn); 
         // echo $post['usernname'];
         $username = $post['username'];
-        $usermail = $post['user_maill'];
+        $usermail  = $post['user_mail'];
         if(isset($_POST['edit'])){
         $newEmail = $_POST['newEmail'];
         require '../admin/config.php';
@@ -37,16 +37,36 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Edit Email</title>
 </head>
-<body class="bg-primary">
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">School name</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Welcome <?php echo $post['username'];?>
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Edit Email</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <br> <br>
     <center>  
         <div class="container">
         <form action="edit_email.php?id=<?php echo $id; ?>" method="post">
      <div class="form-group">
          <label>Enter New Email</label>
-            <input type="email" name="newEmail" id="" placeholder="Enter new email here" class="form-control" value="<?php echo $usermail;?>"> 
+            <input type="email" name="newEmail" id="" placeholder="Enter new email here" class="form-control" value="<?php echo $usermail; ?>"> 
         </div>
         <div class="form-group">
-            <input type="submit" value="Submit" class="form-control btn btn-dark" name="edit">
+            <input type="submit" value="Submit" class="form-control btn btn-primary" name="edit">
         </div>
      
         

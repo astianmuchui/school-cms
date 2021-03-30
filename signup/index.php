@@ -69,5 +69,10 @@
             <input type="submit" value="Sign Up" name="start">
         </form>
     </div>
+    <center>
+        <div class="login-link">
+        <span>Already a user?</span> <a href="../login/">Login</a>
+        </div>
+    </center>
 </body>
 </html>

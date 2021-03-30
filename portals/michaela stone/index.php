@@ -11,7 +11,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
                 <link rel="stylesheet" href="../../css/temp.css">
-                <title>michaela stone | 2</title>
+                <title>michaela stone | Portal</title>
             </head>
             <body>
                 <header>
@@ -54,13 +54,13 @@
                 </div>
                 <div class="panel">
                     <div class="welcome">
-                        <h2>Welcome ,</h2>
+                        <h2>Welcome ,michaela stone</h2>
                     </div>
                     <div class="cards-container">
                         <div class="card">
                             <p>Email Adress</p>
 
-                            <small>michaela8@gmail.com</small>
+                            <small>michaela@gmail.com</small>
                             <a href="../../control/edit_email.php?id=2">change</a>
                         </div>
                         <div class="card">

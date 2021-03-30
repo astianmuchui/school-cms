@@ -25,7 +25,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
                 <link rel="stylesheet" href="../../css/temp.css">
-                <title>'.$username.' | '.$user_id.'</title>
+                <title>'.$username.' | Portal</title>
             </head>
             <body>
                 <header>
@@ -68,7 +68,7 @@
                 </div>
                 <div class="panel">
                     <div class="welcome">
-                        <h2>Welcome ,</h2>
+                        <h2>Welcome ,'.$username.'</h2>
                     </div>
                     <div class="cards-container">
                         <div class="card">

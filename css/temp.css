@@ -60,8 +60,9 @@ main{
     height: 70px;
 }
 .id h5{
-    color: #48daff;
-    font-size: 20px;
+    color: #71c3f3;
+    font-size: 21px;
+    font-weight: bold;
 }
 .status{
     display: inline-flex;
@@ -73,7 +74,7 @@ main{
     width: 10px;
     height: 10px;
     border: 1px solid transparent;
-    background-color: rgb(49, 221, 78);
+    background-color: rgb(44, 255, 79);
     border-radius: 500px;
     margin-top: 21px;
     margin-right: 4px;
@@ -81,6 +82,9 @@ main{
 .status h6{
     margin-top: 20px;
     color: rgb(255, 255, 255) ;
+    font-style: italic;
+    font-weight: 400;
+    font-family: cursive;
 }
 .details{
     margin-top: 90px;
@@ -91,7 +95,7 @@ main{
 }
 .panel{
     width: 85%;
-    background-color: rgb(93, 137, 185);
+    background-color: #2fa4e7;
     margin-left: 15%;
     height: 100vh;
     padding-top: 20px;
@@ -117,9 +121,9 @@ main{
 .card{
     height: 200px;
     width: 300px;
-    background-color: rgba(0,0,0,0.1);
+    background-color: #2c0101;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);   
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(40px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,20 +134,21 @@ main{
 
 }
 .card a{
-    background-color: black;
+    background-color: #00040e;
     margin: 30px 0;
-    padding: 10px 5px;
-    width: 70px;
+    padding: 10px 20px;
+    width: max-content;
+    border-radius: 5px;
     text-align: center;
 }
 .card p{
-    color: #1f0000;
+    color: #ffffff;
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 .card small{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 400;
     font-size: 20px;
 }

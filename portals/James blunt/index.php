@@ -11,7 +11,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
                 <link rel="stylesheet" href="../../css/temp.css">
-                <title>Jared vasques | Portal</title>
+                <title>James blunt | Portal</title>
             </head>
             <body>
                 <header>
@@ -22,7 +22,7 @@
                     <nav>
                         <ul>
                             <li><a href="#"><img src="../../images/avatar.png" alt="" width="30px" height="30px"></a></li>
-                            <li><a href="#">Jared vasques</a></li>
+                            <li><a href="#">James blunt</a></li>
                              <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>   
 
                             
@@ -32,7 +32,7 @@
                 <div class="sidebar">
                     <div class="id">
                         <img src="../../images/avatar.png" alt="" width="100px" height="100px">
-                        <h5>Jared vasques</h5>
+                        <h5>James blunt</h5>
                     </div> <br> <br><br>
                     <div class="status">
                         <div></div>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="details">
                        <span>Adm no:</span>
-                        <h3> 5112</h3>
+                        <h3> 12688</h3>
                     </div>
                     <div class="back">
                     <a href="#">  Go  back to website <i class="fas fa-arrow-right"></i></a>
@@ -54,14 +54,14 @@
                 </div>
                 <div class="panel">
                     <div class="welcome">
-                        <h2>Welcome ,Jared vasques</h2>
+                        <h2>Welcome ,James blunt</h2>
                     </div>
                     <div class="cards-container">
                         <div class="card">
                             <p>Email Adress</p>
 
-                            <small>jaredvasques100@gmail.com</small>
-                            <a href="../../control/edit_email.php?id=15">change</a>
+                            <small>blunt@outlook.com</small>
+                            <a href="../../control/edit_email.php?id=16">change</a>
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>
