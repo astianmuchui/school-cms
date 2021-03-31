@@ -55,7 +55,33 @@
     <title>Login into your account</title>
 </head>
 <body>
-    <h1 class="well">Login</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Log in</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+    <br>
     <div class="container well"> 
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
         <div class="form-group">
@@ -66,7 +92,7 @@
             <label>Password</label>
             <input type="text" class="form-control" name="password">
         </div>
-        <input type="submit" value="Login" class="form-control btn-dark" name="submit">
+        <input type="submit" value="Login" class="form-control btn-primary" name="submit">
     </form>
     </div>
 </body>

@@ -28,7 +28,7 @@
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Back Home
+        <a class="nav-link" href="../../">Back Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -36,19 +36,7 @@
   </div>
 </nav>
 <br>
-<div class="container grid">
-    <?php foreach($suggestions as $suggestion):?>
-    <div class="card bg-secondary mb-3" style="max-width: 20rem;">
-        <div class="card-header">Suggestion</div>
-        <div class="card-body">
-        <h4 class="card-title">Authored by <?php $suggestion['publisher']; ?></h4>
-        <p class="card-text"><?php echo $suggestion['content'];?></p>
-        <small>Pubished on <?php $suggestion['time']; ?></small>
-  </div> <br>
-  <?php endforeach;?>
-</div>  
-</div>
-        <style>
+<style>
             .grid{
                 width: 100%;
                 display: inline-grid;
@@ -56,5 +44,20 @@
                 grid-gap: 10px;
             }
         </style>
+<div class="grid container">
+<?php foreach($suggestions as $suggestion):?>
+    <div class="card bg-secondary mb-3" style="max-width: 20rem;">
+    
+        <div class="card-header">Suggestion</div>
+        <div class="card-body">
+        <h4 class="card-title">Authored by <?php echo $suggestion['publisher']; ?></h4>
+        <p class="card-text"><?php echo $suggestion['content'];?></p>
+        <small>Pubished on <?php echo $suggestion['time']; ?></small>
+  </div> <br>
+  
+</div>
+<?php endforeach;?>  
+</div>
+
 </body>
 </html>

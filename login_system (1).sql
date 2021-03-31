@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2021 at 03:49 PM
+-- Generation Time: Apr 01, 2021 at 12:21 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -87,6 +87,28 @@ CREATE TABLE `mail_records` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `questions`
+--
+
+CREATE TABLE `questions` (
+  `id` int(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `qtn` varchar(255) NOT NULL,
+  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `questions`
+--
+
+INSERT INTO `questions` (`id`, `username`, `user_email`, `qtn`, `time`) VALUES
+(1, 'John doe', 'johndoe@gmail.com', 'how do i recover my password', '2021-03-31 17:54:37.691246'),
+(2, 'Dean collins', 'deancollins@gmail.com', 'How do i submit my assignment', '2021-03-31 20:44:26.870469');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `suggestions`
 --
 
@@ -104,7 +126,29 @@ CREATE TABLE `suggestions` (
 INSERT INTO `suggestions` (`id`, `publisher`, `content`, `time`) VALUES
 (1, 'Jared vasques', 'please improve the water supply', '2021-03-31 08:26:42.357215'),
 (2, 'Cal stone', 'Please add more exams to the system', '2021-03-31 08:27:55.740181'),
-(3, 'Edu starboi', 'I would like you to bring entertainment on sunday\r\n', '2021-03-31 13:29:21.815071');
+(3, 'John williams', 'I would like you to bring entertainment on sunday\r\n', '2021-03-31 13:29:21.815071'),
+(4, 'michaela stone', 'Please add 10 minutes lesson time', '2021-03-31 17:06:08.885090');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teachers`
+--
+
+CREATE TABLE `teachers` (
+  `id` int(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `distinction` varchar(255) NOT NULL,
+  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `teachers`
+--
+
+INSERT INTO `teachers` (`id`, `username`, `email`, `distinction`, `time`) VALUES
+(1, 'John doe', 'johndoe@gmail.com', 'Normal Teacher', '2021-03-31 21:28:14.903300');
 
 -- --------------------------------------------------------
 
@@ -126,11 +170,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `adm_no`, `passcode`, `user_mail`, `created_at`) VALUES
-(2, 'michaela stone', 10958, '1205', 'michaela@gmail.com', '2021-03-29 19:35:43.257316'),
-(14, 'Cal stone', 8280, '6523', 'calstone@gmail.com', '2021-03-30 19:15:19.018777'),
+(2, 'michaela stone', 10958, '1205', 'michaela825@gmail.com', '2021-03-31 17:11:02.211266'),
+(14, 'Cal stone', 8280, '6523', 'calstone22@gmail.com', '2021-03-31 16:59:03.884977'),
 (15, 'Jared vasques', 5112, '8280', 'jaredvasques8@gmail.com', '2021-03-31 08:04:32.118411'),
-(16, 'James blunt', 12688, '15644', 'jamesblunt40@gmail.com', '2021-03-31 08:02:50.590905'),
-(17, 'Edu starboi', 1508, '1508', 'edustar@gmail.com', '2021-03-31 13:28:08.907302');
+(16, 'James blunt', 12688, '15644', 'jamesblunt@gmail.com', '2021-03-31 18:32:25.810757'),
+(17, 'john doe', 1508, '1508', 'johndoe@gmail.com', '2021-03-31 20:11:50.945886');
 
 --
 -- Indexes for dumped tables
@@ -155,9 +199,21 @@ ALTER TABLE `mail_records`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `questions`
+--
+ALTER TABLE `questions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `suggestions`
 --
 ALTER TABLE `suggestions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `teachers`
+--
+ALTER TABLE `teachers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -189,10 +245,22 @@ ALTER TABLE `mail_records`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `questions`
+--
+ALTER TABLE `questions`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `suggestions`
 --
 ALTER TABLE `suggestions`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `teachers`
+--
+ALTER TABLE `teachers`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`

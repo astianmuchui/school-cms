@@ -39,7 +39,7 @@
         <a class="nav-link" href="#">Exams</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Ask a Question</a>
+        <a class="nav-link" href="../questions/">Ask a Question</a>
       </li>
       
     </ul>
