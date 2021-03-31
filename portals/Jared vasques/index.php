@@ -49,7 +49,7 @@
                     <a href="#">Received Messages</a>
                 </div> <br> <br>
                 <div class="back">
-                    <a href="#">Make suggestion</a>
+                    <a href="../../suggestions?id=15">Make suggestion</a>
                 </div>
                 </div>
                 <div class="panel">
@@ -60,7 +60,7 @@
                         <div class="card">
                             <p>Email Adress</p>
 
-                            <small>jaredvasques100@gmail.com</small>
+                            <small>jaredvasques8@gmail.com</small>
                             <a href="../../control/edit_email.php?id=15">change</a>
                         </div>
                         <div class="card">

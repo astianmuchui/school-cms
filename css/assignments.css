@@ -52,7 +52,6 @@ header nav ul li{
 .grid-container{
     width: 90%;
     margin-top: 30px;
-    background: rgba(0, 0, 0, 0.5);
     height: max-content;
     padding: 20px 10px;
     display: grid;
@@ -62,30 +61,4 @@ header nav ul li{
     justify-content: center;
     align-content: center;
     justify-items: center;
-}
-.grid-item{
-    height: 330px;
-    width: 300px;
-    background-color: black;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-}
-.grid-item a{
-    color: black;
-    background-color: #fff;
-    border: 1px solid white;
-    border-radius: 100px;
-    padding: 10px 20px;
-}
-.grid-item a:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.grid-item .border{
-    width: 80%;
-    border: 1px solid #fafafa;
 }

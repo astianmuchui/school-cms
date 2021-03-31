@@ -63,7 +63,7 @@
                     <a href="#">Received Messages</a>
                 </div> <br> <br>
                 <div class="back">
-                    <a href="#">Make suggestion</a>
+                    <a href="../../suggestions?id='.$user_id.'">Make suggestion</a>
                 </div>
                 </div>
                 <div class="panel">

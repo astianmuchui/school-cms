@@ -16,7 +16,7 @@ function NotifyStudents(){
     ';
     $date = date("d/m/y");
     $title  = "Assignment uploaded on $date";
-    require '../admin/config.php';
+    require '../config.php';
 
 
     $query = "SELECT * FROM users";

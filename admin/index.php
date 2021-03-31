@@ -4,62 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <script src="../javascript/font_awesome_main.js"></script>
-    <title>Admin | </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Admin panel</title>
 </head>
 <body>
-  <div class="header-container bg-dark">
-    <div class="title navbar-brand " href="#"> <i class="fas fa-cog fa-3x"></i>School Admin</div> 
-      
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
+        <div class="title">
+             School admin
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#"><i class="fas fa-users-cog"></i>Admin</a></li>
+              <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>  
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" class="header"><i class="fas fa-users-cog fa-3x"></i></a></li>
+            <li><a href="./pages/students database/"><i class="fas fa-school"></i> View students database</a></li>
+            <li><a href="./pages/add exam/"><i class="fas fa-file"></i> New exam</a></li>
+            <li><a href="./pages/add assignment/"><i class="fas fa-file"></i> New Assignment</a></li>
+            <li><a href="./pages/suggestions/"><i class="fas fa-box"></i> Suggestions box</a></li>
+            <li><a href="./pages/questions/"><i class="far fa-question-circle"></i> Asked questions</a></li>
+            <li><a href="./pages/register teacher/"><i class="fas fa-chalkboard-teacher"></i> New teacher</a></li>
+            <li><a href="./pages/teachers/"><i class="fas fa-users"></i> Registered teachers</a></li>
+            <li><a href="./pages/requests"><i class="fas fa-question-circle"></i> View requests</a></li>
+            <li><a href="./pages/blog/"><i class="fas fa-blog"></i> New Post    </a></li>
+            <li><a href="./pages/inbox/"><i class="fas fa-inbox"></i> Received Messages</a></li>
+            <li><a href="./pages/Newsletter/"><i class="far fa-share-square"></i> Message all students</a></li>
+            <li><a href="./pages/message teachers/"><i class="far fa-share-square"></i> Message all Teachers</a></li>
+            <li><a href="./pages/contact/"><i class="fas fa-envelope"></i> Message Individual student</a></li>
+        </ul>
+    </div>
 
-        <div class="collapse navbar-collapse" id="navbarColor02">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle btn btn-primary" id="open" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Manage school</a>
-                    <div class="dropdown-menu" id="dropdown">
-                      <a class="dropdown-item" href="#" id="exams_opener">Manage exams</a>
-                      <a class="dropdown-item" href="#" id="assignments_opener">Manage Assignments</a>
-                      <a class="dropdown-item" href="#">View Students database</a>
-                      <a class="dropdown-item" href="#">Message students</a>
-                      <a class="dropdown-item" href="#"></a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item bg-dark text-white" href="#" style="font-size: large; text-align: center; " id="close">  &times;</a>
-                    </div>
-                  </li>
-          </ul>
-        </div>
-      </nav>
 
-  </div>
-      
-    <div class="card text-white bg-info mb-3 items" style="max-width: 20rem;">
-        <div class="card-header">Dashboard</div>
-        <div class="card-body">
-        <div class="card-header">Users
-            <span class="badge badge-primary badge-pill"><?php require "../server/count_users.php";?></span>
+
+    <div class="statistics">
+        <h1>System overview</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h5>Users</h5>
+                <small><?php require '../server/count_users.php';?></small>
+            </div>  
+            <div class="grid-item">
+                <h5>Pages</h5>
+                <small>6</small>
+            </div>
+            <div class="grid-item">
+                <h5>Uploaded Assignments</h5>
+                <small><?php require '../server/assignment_numbers.php';?></small>
+            </div>
+            <div class="grid-item">
+                <h5>Uploaded Exams</h5>
+                <small><?php require '../server/exam_numbers.php';?></small>
+            </div>
+            <div class="grid-item">
+                <h5>Suggestions</h5>
+                <small><?php require '../server/count_suggestions.php';?></small>
+            </div>
+            <div class="grid-item">
+                <h5>Received messages</h5>
+                <small>2</small>
+            </div>
+            <div class="grid-item">
+                <h5>Requests</h5>
+                <small>2</small>
+            </div>
+            <div class="grid-item">
+                <h5>Asked questions</h5>
+                <small>5</small>
+            </div>
         </div>
-        <div class="card-header">Pages
-            <span class="badge badge-primary badge-pill">6</span>
-        </div>
-        <div class="card-header">Assignments
-            <span class="badge badge-primary badge-pill"><?php require "../server/assignment_numbers.php";?></span>
-        </div>
-        <div class="card-header">Extra Exams
-            <span class="badge badge-primary badge-pill"><?php require "../server/exam_numbers.php"; ?></span>
-        </div>
-        <div class="card-header">Received Messages
-            <span class="badge badge-primary badge-pill">0</span>
-        </div>
-        </div>
-      </div>
-      <div class="left-card" id="left-card">
-        <div class="exams_container" id="exams_container"><?php require "./add_exam.php"; ?>  </div> 
-       </div>
-      <!-- <script src="../javascript/switch.js"></script> -->
-      <script src="../javascript/open_dropdown.js"></script>
+    </div>
+</main>
+    <script src="../javascript/font_awesome_main.js"></script>
 </body>
 </html>
