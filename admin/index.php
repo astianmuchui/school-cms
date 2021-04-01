@@ -45,12 +45,12 @@
         <h1>System overview</h1>
         <div class="grid-container">
             <div class="grid-item">
-                <h5>Users</h5>
+                <h5>Registered Students</h5>
                 <small><?php require '../server/count_users.php';?></small>
             </div>  
             <div class="grid-item">
-                <h5>Pages</h5>
-                <small>6</small>
+                <h5>Teachers</h5>
+                <small><?php require '../server/count_teachers.php';?></small>
             </div>
             <div class="grid-item">
                 <h5>Uploaded Assignments</h5>
@@ -74,7 +74,7 @@
             </div>
             <div class="grid-item">
                 <h5>Asked questions</h5>
-                <small>5</small>
+                <small><?php require '../server//count_questions.php';?></small>
             </div>
         </div>
     </div>
