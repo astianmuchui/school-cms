@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2021 at 12:21 AM
+-- Generation Time: Apr 02, 2021 at 09:06 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -49,6 +49,29 @@ INSERT INTO `assignments` (`id`, `title`, `doc_file`, `time`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `blogposts`
+--
+
+CREATE TABLE `blogposts` (
+  `id` int(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `created_at` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blogposts`
+--
+
+INSERT INTO `blogposts` (`id`, `title`, `content`, `image`, `author`, `created_at`) VALUES
+(1, 'Vehicles', 'cars are a good thing', 'car-1300629_1280.png', 'The principal', '2021-04-01 15:39:58.404697'),
+(2, 'Watches', 'Watches keep our time and remind us when we are needed somewhere', 'pexels-manas-saxena-5828508.jpg', 'Deputy Principal', '2021-04-01 15:43:32.246030');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `exams`
 --
 
@@ -84,6 +107,54 @@ CREATE TABLE `mail_records` (
   `send_time` timestamp(6) NOT NULL DEFAULT current_timestamp(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `mail_records`
+--
+
+INSERT INTO `mail_records` (`id`, `title`, `mail_message`, `send_time`) VALUES
+(1, 'Good morning', 'hi there how are you', '0000-00-00 00:00:00.000000');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `sent_at` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `name`, `email`, `message`, `sent_at`) VALUES
+(4, 'jane doe', 'janedoe3@gmail.com', 'Hi, how are you, I hope you are fine', '2021-04-02 15:53:06.535032');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletters`
+--
+
+CREATE TABLE `newsletters` (
+  `id` int(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `newsletters`
+--
+
+INSERT INTO `newsletters` (`id`, `title`, `message`, `time`) VALUES
+(1, 'Machines', 'A machine is a combination of bodies so connected that their relative motions are constrained Example gears, wheelbarrows and ironically even zips', '2021-04-02 17:37:30.606324');
+
 -- --------------------------------------------------------
 
 --
@@ -105,6 +176,27 @@ CREATE TABLE `questions` (
 INSERT INTO `questions` (`id`, `username`, `user_email`, `qtn`, `time`) VALUES
 (1, 'John doe', 'johndoe@gmail.com', 'how do i recover my password', '2021-03-31 17:54:37.691246'),
 (2, 'Dean collins', 'deancollins@gmail.com', 'How do i submit my assignment', '2021-03-31 20:44:26.870469');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `requests`
+--
+
+CREATE TABLE `requests` (
+  `id` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `requests`
+--
+
+INSERT INTO `requests` (`id`, `name`, `type`, `subject`, `time`) VALUES
+(1, 'Chris parker', 'Assignment request', 'Biology', '2021-04-01 14:17:11.866648');
 
 -- --------------------------------------------------------
 
@@ -148,7 +240,9 @@ CREATE TABLE `teachers` (
 --
 
 INSERT INTO `teachers` (`id`, `username`, `email`, `distinction`, `time`) VALUES
-(1, 'John doe', 'johndoe@gmail.com', 'Normal Teacher', '2021-03-31 21:28:14.903300');
+(1, 'John doe', 'johndoe@gmail.com', 'Normal Teacher', '2021-03-31 21:28:14.903300'),
+(2, 'Mr james blunt', 'jamesblunt@gmail.com', 'Club patron', '2021-04-01 11:33:53.689902'),
+(3, 'mr timothy', 'timothy@gmail.com', 'Senior Teacher', '2021-04-01 11:53:40.466023');
 
 -- --------------------------------------------------------
 
@@ -170,10 +264,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `adm_no`, `passcode`, `user_mail`, `created_at`) VALUES
-(2, 'michaela stone', 10958, '1205', 'michaela825@gmail.com', '2021-03-31 17:11:02.211266'),
+(2, 'michaela stone', 10958, '1205', 'michaela25@gmail.com', '2021-04-01 19:01:37.596728'),
 (14, 'Cal stone', 8280, '6523', 'calstone22@gmail.com', '2021-03-31 16:59:03.884977'),
 (15, 'Jared vasques', 5112, '8280', 'jaredvasques8@gmail.com', '2021-03-31 08:04:32.118411'),
-(16, 'James blunt', 12688, '15644', 'jamesblunt@gmail.com', '2021-03-31 18:32:25.810757'),
+(16, 'James blunt', 12688, '15644', 'blunt@gmail.com', '2021-04-02 12:29:17.686134'),
 (17, 'john doe', 1508, '1508', 'johndoe@gmail.com', '2021-03-31 20:11:50.945886');
 
 --
@@ -184,6 +278,12 @@ INSERT INTO `users` (`user_id`, `username`, `adm_no`, `passcode`, `user_mail`, `
 -- Indexes for table `assignments`
 --
 ALTER TABLE `assignments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blogposts`
+--
+ALTER TABLE `blogposts`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -199,9 +299,27 @@ ALTER TABLE `mail_records`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `newsletters`
+--
+ALTER TABLE `newsletters`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `questions`
 --
 ALTER TABLE `questions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `requests`
+--
+ALTER TABLE `requests`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -233,6 +351,12 @@ ALTER TABLE `assignments`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
+-- AUTO_INCREMENT for table `blogposts`
+--
+ALTER TABLE `blogposts`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `exams`
 --
 ALTER TABLE `exams`
@@ -242,13 +366,31 @@ ALTER TABLE `exams`
 -- AUTO_INCREMENT for table `mail_records`
 --
 ALTER TABLE `mail_records`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `newsletters`
+--
+ALTER TABLE `newsletters`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `requests`
+--
+ALTER TABLE `requests`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `suggestions`
@@ -260,7 +402,7 @@ ALTER TABLE `suggestions`
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

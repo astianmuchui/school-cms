@@ -22,7 +22,7 @@
     <main>
     <div class="sidebar">
         <ul>
-            <li><a href="#" class="header"><i class="fas fa-users-cog fa-3x"></i></a></li>
+            <li><a href="#" class="header" id="wheel"><i class="fas fa-cog " ></i></a></li>
             <li><a href="./pages/students database/"><i class="fas fa-school"></i> View students database</a></li>
             <li><a href="./pages/add exam/"><i class="fas fa-file"></i> New exam</a></li>
             <li><a href="./pages/add assignment/"><i class="fas fa-file"></i> New Assignment</a></li>
@@ -31,7 +31,8 @@
             <li><a href="./pages/register teacher/"><i class="fas fa-chalkboard-teacher"></i> New teacher</a></li>
             <li><a href="./pages/teachers/"><i class="fas fa-users"></i> Registered teachers</a></li>
             <li><a href="./pages/requests"><i class="fas fa-question-circle"></i> View requests</a></li>
-            <li><a href="./pages/blog/"><i class="fas fa-blog"></i> New Post    </a></li>
+            <li><a href="./pages/blog/"><i class="fas fa-blog"></i> New Post  </a></li>
+            <li><a href="./pages/myposts/"><i class="fas fa-blog"></i> My posts</a></li>
             <li><a href="./pages/inbox/"><i class="fas fa-inbox"></i> Received Messages</a></li>
             <li><a href="./pages/Newsletter/"><i class="far fa-share-square"></i> Message all students</a></li>
             <li><a href="./pages/message teachers/"><i class="far fa-share-square"></i> Message all Teachers</a></li>
@@ -48,6 +49,10 @@
                 <h5>Registered Students</h5>
                 <small><?php require '../server/count_users.php';?></small>
             </div>  
+            <div class="grid-item">
+                <h5>Posts</h5>
+                <small><?php require '../server/count_posts.php';?></small>
+            </div>
             <div class="grid-item">
                 <h5>Teachers</h5>
                 <small><?php require '../server/count_teachers.php';?></small>
@@ -66,11 +71,11 @@
             </div>
             <div class="grid-item">
                 <h5>Received messages</h5>
-                <small>2</small>
+                <small><?php require '../server/count_messages.php';?></small>
             </div>
             <div class="grid-item">
                 <h5>Requests</h5>
-                <small>2</small>
+                <small><?php require '../server/count_requests.php';?></small>
             </div>
             <div class="grid-item">
                 <h5>Asked questions</h5>

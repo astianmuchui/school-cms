@@ -60,7 +60,7 @@
                         <div class="card">
                             <p>Email Adress</p>
 
-                            <small>michaela825@gmail.com</small>
+                            <small>michaela25@gmail.com</small>
                             <a href="../../control/edit_email.php?id=2">change</a>
                         </div>
                         <div class="card">

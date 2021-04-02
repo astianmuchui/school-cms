@@ -52,7 +52,7 @@
         //call function to insert
         insert($title,$document);
         require('../../../handlers/assignment_mail.php');
-        NotifyStudents();
+        // NotifyStudents();
     }
 ?>
 <!DOCTYPE html>
