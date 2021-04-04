@@ -1,10 +1,19 @@
 <?php
+    session_start();
     require '../config.php';
     $query = 'SELECT * FROM users';
      $result = mysqli_query($conn,$query);
      $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
      mysqli_free_result($result);
      mysqli_close($conn); 
+
+     if(isset($_POST['submit'])){
+      header("Location: ./search.php");  
+      $_SESSION['name'] = $_POST['user'];
+        
+
+     } 
+
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +44,12 @@
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" class="form-inline my-2 my-lg-0" >
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="user" required>
+      <input class="btn btn-secondary my-2 my-sm-0" type="submit" name="submit" value="Search">
     </form>
   </div>
 </nav>
-
 
 
 <div class="jumbotron">

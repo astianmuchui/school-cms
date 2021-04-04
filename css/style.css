@@ -88,13 +88,15 @@ main{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px;
     font-weight: lighter;
+    font-size: 14px;
+    padding:  5px 0;
 }
 .sidebar i{
-    color: rgb(199, 199, 199);
+    color: rgb(150, 0, 0);
 } 
 .statistics{
     margin-left: 25%;
-    background-color: rgba(151, 144, 144, 0.767);
+    background-color: rgb(64, 107, 150);
     width: 75%;
     height: 92.35vh;
     display: flex;
@@ -125,6 +127,7 @@ main{
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
     z-index: 3;
     border-radius: 6px;
+    cursor: pointer;
 }
 .statistics .grid-container .grid-item:nth-child(1){
     background-color: rgba(137, 43, 226, 0.76);
