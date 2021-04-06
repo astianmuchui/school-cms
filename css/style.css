@@ -5,7 +5,7 @@ body{
     overflow: none;
 }
 header{
-    background: black;
+    background: rgb(92, 146, 190);
     width: 100%;
     display: inline-flex;
     position: sticky;
@@ -13,7 +13,7 @@ header{
     z-index: 999;
 }
 header .title{
-    color: rgb(255, 255, 255);
+    color: #00030a;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
@@ -45,9 +45,9 @@ main{
 }
 .sidebar{
     position: fixed;
-    background-color: #000102;
+    background-color: #000c18;
     height: 90vh;
-    width: 25%;
+    width: 20%;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@ main{
     margin-top: 10px;
 }
 #wheel i{
-    color: rgb(218, 27, 27);
+    color: rgb(100, 185, 255);
     font-size: 80px;
     animation-name: running;
     animation-play-state: running;
@@ -92,12 +92,13 @@ main{
     padding:  5px 0;
 }
 .sidebar i{
-    color: rgb(150, 0, 0);
+    color: rgb(92, 146, 190);
 } 
 .statistics{
-    margin-left: 25%;
-    background-color: rgb(64, 107, 150);
-    width: 75%;
+    margin-left: 20%;
+    background-color: rgba(177, 176, 176, 0.842);
+    width: 80%;
+    overflow-y: auto;
     height: 92.35vh;
     display: flex;
     flex-direction: column;
@@ -108,6 +109,7 @@ main{
 }
 .statistics h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
 }
 .statistics .grid-container{
     display: grid;
@@ -116,7 +118,7 @@ main{
 }
 .statistics .grid-container .grid-item{
     width: 210px;
-    height: 120px;
+    height: 150px;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -130,39 +132,59 @@ main{
     cursor: pointer;
 }
 .statistics .grid-container .grid-item:nth-child(1){
-    background-color: rgba(137, 43, 226, 0.76);
+    background-color: #00030a;
 }
 .statistics .grid-container .grid-item:nth-child(2){
-    background-color: rgb(156, 156, 156);
+    background-color: #00030a;
 }
 .statistics .grid-container .grid-item:nth-child(3){
-    background-color: rgb(252, 38, 38);
+    background-color: #00030a;
 }
 .statistics .grid-container .grid-item:nth-child(4){
-    background-color: rgb(119, 176, 250);
+    background-color: rgb(255, 255, 255);
 }
 .statistics .grid-container .grid-item:nth-child(5){
-    background-color: rgb(76, 205, 50);
+    background-color: rgb(255, 255, 255);
 }
 .statistics .grid-container .grid-item:nth-child(6){
-    background-color: tomato;
+    background-color: rgb(255, 255, 255);
 }
 .statistics .grid-container .grid-item:nth-child(7){
-    background-color: rgb(99, 41, 0);
+    background-color: #00030a;
 }
 .statistics .grid-container .grid-item:nth-child(8){
-    background-color: rgb(250, 185, 20);
+    background-color: #00030a;
 }
 .statistics .grid-container .grid-item:nth-child(9){
-    background-color: rgb(155, 193, 252);
+    background-color: #00030a;
+}
+
+.statistics .grid-container .grid-item:nth-child(4) h5,
+.statistics .grid-container .grid-item:nth-child(5) h5,
+.statistics .grid-container .grid-item:nth-child(6) h5{
+    color: #00030a;
+}
+.statistics .grid-container .grid-item:nth-child(4) i,
+.statistics .grid-container .grid-item:nth-child(5) i,
+.statistics .grid-container .grid-item:nth-child(6) i{
+    color: #00030a;
+}
+.statistics .grid-container .grid-item:nth-child(4) small,
+.statistics .grid-container .grid-item:nth-child(5) small,
+.statistics .grid-container .grid-item:nth-child(6) small{
+    color: #00030a;
 }
 .statistics .grid-container .grid-item h5{
-    color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
 }
 .statistics .grid-container .grid-item small{
+    color: rgb(255, 255, 255);
     font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     transform: rotate(-10deg);
+}
+.statistics .grid-container .grid-item i{
+    color: rgb(255, 255, 255);
 }

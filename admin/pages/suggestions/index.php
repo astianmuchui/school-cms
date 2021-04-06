@@ -52,7 +52,8 @@
         <div class="card-body">
         <h4 class="card-title">Authored by <?php echo $suggestion['publisher']; ?></h4>
         <p class="card-text"><?php echo $suggestion['content'];?></p>
-        <small>Pubished on <?php echo $suggestion['time']; ?></small>
+        <small>Pubished on <?php echo $suggestion['time']; ?></small> <br> <br>
+        <a href="./view.php?id=<?php echo $suggestion['publisher'];?>" class="btn bg-dark text-white">View student</a>
   </div> <br>
   
 </div>

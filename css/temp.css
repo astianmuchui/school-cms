@@ -6,7 +6,7 @@ body{
 }
 header{
     width: 100%;
-    background-color: #520404;
+    background-color: #00030a;
     display: inline-flex;
     color: White;
     height: 50px;
@@ -82,9 +82,9 @@ main{
 .status h6{
     margin-top: 20px;
     color: rgb(255, 255, 255) ;
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: 400;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .details{
     margin-top: 90px;
@@ -95,7 +95,7 @@ main{
 }
 .panel{
     width: 85%;
-    background-color: #2fa4e7;
+    background-color: #b8b8b8cc;
     margin-left: 15%;
     height: 100vh;
     padding-top: 20px;
@@ -113,6 +113,10 @@ main{
     width: max-content;
     height: max-content;
     display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     flex-wrap: wrap;
@@ -121,7 +125,7 @@ main{
 .card{
     height: 200px;
     width: 300px;
-    background-color: #2c0101;
+    background-color: #2fa4e7;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);   
     backdrop-filter: blur(40px);
     display: flex;
@@ -129,7 +133,7 @@ main{
     align-items: center;
     align-content: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 3px;
 
 }
@@ -142,15 +146,17 @@ main{
     text-align: center;
 }
 .card p{
-    color: #ffffff;
-    font-size: 25px;
+    color: #000000;
+    font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 .card small{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
+    transform: rotate(1.2deg);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .back i{
     color: rgb(0, 0, 0);
@@ -167,3 +173,32 @@ main{
     padding: 10px;
 
 }
+
+meter{
+    height: 50px;
+    width: 150px;
+}
+meter ::-webkit-meter-optimum-value{
+    box-shadow: 0 5px 5px -5px #999 inset;
+    background: white;
+    background-size: cover;
+
+}
+meter::-webkit-meter-bar{
+    background-color: #000000;
+    border-radius: 2px;
+    width: 200px;
+    height: 30px;
+    border: 1px solid transparent;
+} 
+meter::-webkit-meter-optimum-value{
+    background: #ffffff;
+}
+meter::-webkit-meter-even-less-good-value{
+    background-color: #2fa4e7;
+}
+meter::-webkit-meter-suboptimum-value{
+    background-color: #2fa4e7;
+}
+
+

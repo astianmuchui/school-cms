@@ -62,7 +62,19 @@
     </div>
     <div class="form-group">
         <label>Subject </label>
-        <input type="text" name="requestsubject" class="form-control" required>
+        <select name="requestsubject" id="" class="form-control">
+        <option value="all">--SELECT--</option>
+        <option value="biology">Biology</option>
+        <option value="chemistry">Chemistry</option>
+        <option value="physics">Physics</option>
+        <option value="maths">Mathematics</option>
+        <option value="english">English</option>
+        <option value="kiswahili">Swahili</option>
+        <option value="technicals">Technicals</option>
+        <option value="history">History</option>
+        <option value="geography">Geography</option>
+        <option value="relegious education">Relegious education</option>
+        </select>
     </div>
     <div class="form-group">
         <input type="submit" name="request" value="Make request" class="form-control btn btn-primary">

@@ -59,7 +59,7 @@
 
 <form action="index.php?id=<?php echo $id;?>" method="post">
     <div class="form-group">
-        <label>Write your suggestion,<?php echo $student;?></label>
+        <label>Write your suggestion ,Your Identity remains anonymous</label>
         <textarea name="suggestion" id="" cols="30" rows="10" class="form-control" required></textarea>
     </div>
     <div class="form-group">

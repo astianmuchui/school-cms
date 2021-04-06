@@ -6,6 +6,22 @@
     mysqli_free_result($result);
     mysqli_close($conn); 
     
+    if(isset($_GET['id'])){
+      $id = $_GET['id'];
+    }
+    function track(){
+      include '../admin/config.php';
+      global $conn,$id;
+          
+          $query = "SELECT * FROM users WHERE users.user_id = $id";
+          $result = mysqli_query($conn,$query);
+          $post = mysqli_fetch_assoc($result);
+          mysqli_free_result($result);
+          mysqli_close($conn);
+
+          
+
+    }
         
 ?>
 <!DOCTYPE html>

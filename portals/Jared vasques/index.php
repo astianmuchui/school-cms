@@ -40,7 +40,7 @@
                     </div>
                     <div class="details">
                        <span>Adm no:</span>
-                        <h3> 5112</h3>
+                        <h3> 2035</h3>
                     </div>
                     <div class="back">
                     <a href="#">  Go  back to website <i class="fas fa-arrow-right"></i></a>
@@ -49,7 +49,11 @@
                     <a href="#">Received Messages</a>
                 </div> <br> <br>
                 <div class="back">
-                    <a href="../../suggestions?id=15">Make suggestion</a>
+                    <a href="../../suggestions?id=18">Make suggestion</a>
+                </div>
+                <br> <br> 
+                <div class="back">
+                    <a href="#">Ask question</a>
                 </div>
                 </div>
                 <div class="panel">
@@ -60,21 +64,29 @@
                         <div class="card">
                             <p>Email Adress</p>
 
-                            <small>jaredvasques8@gmail.com</small>
-                            <a href="../../control/edit_email.php?id=15">change</a>
+                            <small>vasques8@gmail.com</small>
+                            <a href="../../control/edit_email.php?id=18">change</a>
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>
                             <small><?php require "../../server/assignment_numbers.php";?></small>
-                            <a href="../../assignments/">View</a>
+                            <a href="../../assignments/?id=18">View</a>
             
                         </div>
                         <div class="card">
                             <p>Extra Exams</p>
                             <small><?php require"../../server/exam_numbers.php";?></small>
-                            <a href="../../exams">View</a>
+                            <a href="../../exams?id=18">View</a>
                         </div>
+                        <div class="card">
+                            <p>Assignments download rate</p>
+                            <meter min="0" max="100" value="90"></meter>
+                     </div>           
+                     <div class="card">
+                            <p> Exams download rate</p>
+                            <meter min="0" max="100" value="90"></meter>
                         
+                    </div>
                         
                     </div>
                 </div>

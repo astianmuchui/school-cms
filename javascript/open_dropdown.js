@@ -9,3 +9,12 @@ var open = document.getElementById("open");
                   content.style.display = "none";
               }
               
+
+              //Open Menu
+
+
+              var menu = document.getElementById("menu");
+              var nav = document.getElementById("nav");
+              menu.onclick = function(){
+                nav.style.display="flex";
+              }

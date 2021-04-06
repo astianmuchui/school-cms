@@ -51,6 +51,10 @@
                 <div class="back">
                     <a href="../../suggestions?id=2">Make suggestion</a>
                 </div>
+                <br> <br> 
+                <div class="back">
+                    <a href="#">Ask question</a>
+                </div>
                 </div>
                 <div class="panel">
                     <div class="welcome">
@@ -60,21 +64,29 @@
                         <div class="card">
                             <p>Email Adress</p>
 
-                            <small>michaela25@gmail.com</small>
+                            <small>michaela@gmail.com</small>
                             <a href="../../control/edit_email.php?id=2">change</a>
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>
                             <small><?php require "../../server/assignment_numbers.php";?></small>
-                            <a href="../../assignments/">View</a>
+                            <a href="../../assignments/?id=2">View</a>
             
                         </div>
                         <div class="card">
                             <p>Extra Exams</p>
                             <small><?php require"../../server/exam_numbers.php";?></small>
-                            <a href="../../exams">View</a>
+                            <a href="../../exams?id=2">View</a>
                         </div>
+                        <div class="card">
+                            <p>Assignments download rate</p>
+                            <meter min="0" max="100" value="90"></meter>
+                     </div>           
+                     <div class="card">
+                            <p> Exams download rate</p>
+                            <meter min="0" max="100" value="90"></meter>
                         
+                    </div>
                         
                     </div>
                 </div>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/style.css">
     <title>Admin panel</title>
 </head>
@@ -39,7 +40,6 @@
             <li><a href="./pages/contact/"><i class="fas fa-envelope"></i> Message Individual student</a></li>
         </ul>
     </div>
-
 
 
     <div class="statistics">
@@ -84,6 +84,7 @@
         </div>
     </div>
 </main>
+
     <script src="../javascript/font_awesome_main.js"></script>
 </body>
 </html>

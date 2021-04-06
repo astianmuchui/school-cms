@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2021 at 09:06 PM
+-- Generation Time: Apr 06, 2021 at 09:09 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -72,6 +72,19 @@ INSERT INTO `blogposts` (`id`, `title`, `content`, `image`, `author`, `created_a
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `downloaded_assignments`
+--
+
+CREATE TABLE `downloaded_assignments` (
+  `id` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `adm_no` varchar(255) NOT NULL,
+  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `exams`
 --
 
@@ -93,6 +106,28 @@ INSERT INTO `exams` (`id`, `exam_name`, `exam_file`, `time`) VALUES
 (4, 'Business form 1', 'BUSINESS-STUDIES-NOTES-F1-1.docx', '2021-03-31 12:09:55.512804'),
 (6, 'Biology revision booklet', 'BIOLOGY-REVISION-BOOKLET.pdf', '2021-03-31 12:54:17.762108'),
 (7, 'Biology Mocks', 'Topical-Mock-Biology-questions.pdf', '2021-03-31 13:31:52.341610');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(255) NOT NULL,
+  `caption` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `caption`, `image`, `time`) VALUES
+(1, 'cartoon', 'fileName.jpg', '2021-04-05 15:18:05.025566'),
+(2, 'vanilla street', 'vanilla street.jpg', '2021-04-05 18:56:48.820733'),
+(3, 'car', '02_Desktop.jpg', '2021-04-05 19:55:59.653313');
 
 -- --------------------------------------------------------
 
@@ -133,7 +168,30 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `name`, `email`, `message`, `sent_at`) VALUES
-(4, 'jane doe', 'janedoe3@gmail.com', 'Hi, how are you, I hope you are fine', '2021-04-02 15:53:06.535032');
+(4, 'jane doe', 'janedoe3@gmail.com', 'Hi, how are you, I hope you are fine', '2021-04-02 15:53:06.535032'),
+(5, 'Kim jeffreys', 'kim@gmail.com', 'hey', '2021-04-05 21:26:07.009446');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `id` int(255) NOT NULL,
+  `heading` varchar(255) NOT NULL,
+  `body` varchar(255) NOT NULL,
+  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`id`, `heading`, `body`, `time`) VALUES
+(1, 'Paradigm shift', 'this is a change in how we think', '2021-04-05 14:35:12.857164'),
+(2, 'Paradigm shift', 'this is a change in how we think', '2021-04-05 14:35:47.596203'),
+(3, 'Paradigm shift', 'this is a change in how we think', '2021-04-05 14:36:47.923884');
 
 -- --------------------------------------------------------
 
@@ -196,7 +254,9 @@ CREATE TABLE `requests` (
 --
 
 INSERT INTO `requests` (`id`, `name`, `type`, `subject`, `time`) VALUES
-(1, 'Chris parker', 'Assignment request', 'Biology', '2021-04-01 14:17:11.866648');
+(1, 'Chris parker', 'Assignment request', 'Biology', '2021-04-01 14:17:11.866648'),
+(2, 'Dean Ambrose', 'Exam request', 'chemistry', '2021-04-05 21:28:31.714788'),
+(3, 'Dean Ambrose', 'Exam request', 'technicals', '2021-04-06 04:48:34.559905');
 
 -- --------------------------------------------------------
 
@@ -218,8 +278,10 @@ CREATE TABLE `suggestions` (
 INSERT INTO `suggestions` (`id`, `publisher`, `content`, `time`) VALUES
 (1, 'Jared vasques', 'please improve the water supply', '2021-03-31 08:26:42.357215'),
 (2, 'Cal stone', 'Please add more exams to the system', '2021-03-31 08:27:55.740181'),
-(3, 'John williams', 'I would like you to bring entertainment on sunday\r\n', '2021-03-31 13:29:21.815071'),
-(4, 'michaela stone', 'Please add 10 minutes lesson time', '2021-03-31 17:06:08.885090');
+(3, 'John doe', 'I would like you to bring entertainment on sunday\r\n', '2021-03-31 13:29:21.815071'),
+(4, 'michaela stone', 'Please add 10 minutes lesson time', '2021-03-31 17:06:08.885090'),
+(5, 'Cal stone', 'Stupid idiot', '2021-04-05 05:36:04.471791'),
+(6, 'Paul Levesque', 'You can at times be unintentionally entertaining', '2021-04-05 21:18:54.895380');
 
 -- --------------------------------------------------------
 
@@ -264,11 +326,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `adm_no`, `passcode`, `user_mail`, `created_at`) VALUES
-(2, 'michaela stone', 10958, '1205', 'michaela25@gmail.com', '2021-04-01 19:01:37.596728'),
-(14, 'Cal stone', 8280, '6523', 'calstone22@gmail.com', '2021-03-31 16:59:03.884977'),
+(2, 'michaela stone', 10958, '1205', 'michaela@gmail.com', '2021-04-05 05:40:04.187301'),
+(14, 'Cal stone', 8280, '6523', 'calstone1@gmail.com', '2021-04-05 13:34:37.798593'),
 (15, 'Jared vasques', 5112, '8280', 'jaredvasques8@gmail.com', '2021-03-31 08:04:32.118411'),
 (16, 'James blunt', 12688, '15644', 'blunt@gmail.com', '2021-04-02 12:29:17.686134'),
-(17, 'john doe', 1508, '1508', 'johndoe@gmail.com', '2021-03-31 20:11:50.945886');
+(17, 'john doe', 1508, '1508', 'johndoe@gmail.com', '2021-04-05 16:07:26.601841'),
+(18, 'Jared vasques', 2035, '293664', 'vasques8@gmail.com', '2021-04-05 05:29:23.593780'),
+(19, 'Paul Levesque', 1996, '120022', 'paullevesque@gmail.com', '2021-04-05 21:17:58.473972');
 
 --
 -- Indexes for dumped tables
@@ -287,9 +351,21 @@ ALTER TABLE `blogposts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `downloaded_assignments`
+--
+ALTER TABLE `downloaded_assignments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `exams`
 --
 ALTER TABLE `exams`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -302,6 +378,12 @@ ALTER TABLE `mail_records`
 -- Indexes for table `messages`
 --
 ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -357,10 +439,22 @@ ALTER TABLE `blogposts`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `downloaded_assignments`
+--
+ALTER TABLE `downloaded_assignments`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `exams`
 --
 ALTER TABLE `exams`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `mail_records`
@@ -372,7 +466,13 @@ ALTER TABLE `mail_records`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `newsletters`
@@ -390,13 +490,13 @@ ALTER TABLE `questions`
 -- AUTO_INCREMENT for table `requests`
 --
 ALTER TABLE `requests`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `suggestions`
 --
 ALTER TABLE `suggestions`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `teachers`
@@ -408,7 +508,7 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

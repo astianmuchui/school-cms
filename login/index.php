@@ -1,6 +1,7 @@
 <?php
+    
     require '../admin/config.php';
-    $test = "jane doe";
+    
 
     
     function login($user_name,$pass_word){
