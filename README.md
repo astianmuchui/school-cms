@@ -41,3 +41,6 @@ Can message all teachers
 
 Can message teachers individually
 .
+
+
+![panel-new](https://user-images.githubusercontent.com/67919419/114103607-1ce11800-98d2-11eb-98e6-0091e89a961e.PNG)
