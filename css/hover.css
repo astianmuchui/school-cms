@@ -2146,8 +2146,8 @@
   left: 0;
   right: 100%;
   bottom: 0;
-  background: #2098D1;
-  height: 4px;
+  background: lightblue;
+  height: 1px;
   -webkit-transition-property: right;
   transition-property: right;
   -webkit-transition-duration: 0.3s;

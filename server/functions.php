@@ -17,90 +17,83 @@
                 require "../../server/db_pure.php";
                 require "../../server/check_login.php";
             ?>
+         
             <!DOCTYPE html>
             <html lang="en">
             <head>
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
-                <link rel="stylesheet" href="../../css/hover.css">
-                <link rel="stylesheet" href="../../css/temp.css">
                 <link rel="stylesheet" href="../../css/font-awesome.min.css">
+                <script src="../../javascript/font_awesome_main.js"></script>
+                <link rel="stylesheet" href="../../css/min.css">
+                <link rel="stylesheet" href="../../css/hover.css">
+
                 <title>'.$username.' | Portal</title>
             </head>
             <body>
                 <header>
-            
-                    <div class="title">
-                        School name
+                    <div class="name">
+                        School Name
                     </div>
+            
                     <nav>
                         <ul>
-                            <li><a href="#"><img class="hvr-bob" src="../../images/avatar.png" alt="" width="30px" height="30px"></a></li>
-                            <li><a href="#">'.$username.'</a></li>
-                             <li><a href="../../logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>   
-
-                            
+                            <li><a href="../../logout/"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                            <li><a href="#"><i class="fas fa-long-arrow-alt-left"></i> Back to website</a></li>
                         </ul>
                     </nav>
                 </header>
-                <div class="sidebar">
-                    <div class="id">
-                        <img src="../../images/avatar.png" alt="" width="100px" height="100px">
-                        <h5>'.$username.'</h5>
-                    </div> <br> <br><br>
-                    <div class="status">
-                        <div></div>
-                        <h6>Online</h6>
-                    </div>
-                    <div class="details">
-                       <span>Adm no:</span>
-                        <h3> '.$adm_no.'</h3>
-                    </div>
-                    <div class="back">
-                    <a href="#" class="hvr-forward">  Go  back to website <i class="fas fa-arrow-right"></i></a>
-                </div> <br> 
-                <div class="back">
-                    <a href="#" class="hvr-forward">Received Messages</a>
-                </div> <br> 
-                <div class="back">
-                    <a href="../../suggestions?id='.$user_id.'" class="hvr-forward">Make suggestion</a>
-                </div>
-                <br> 
-                <div class="back">
-                    <a href="#" class="hvr-forward">Ask question</a>
-                </div>
-                </div>
-                <div class="panel">
-                    <div class="welcome">
-                        <h2>Welcome ,'.$username.'</h2>
-                    </div>
-                    <div class="cards-container">
-                        <div class="card">
-                            <p>Email Adress</p>
-
-                            <small>'.$student_email.'</small>
-                            <a href="../../control/edit_email.php?id='.$user_id.'" class="hvr-float">change</a>
-                        </div>
-                        <div class="card">
-                            <p>Available Assignments</p>
-                            <small><?php require "../../server/assignment_numbers.php";?></small>
-                            <a href="../../assignments/?id='.$user_id.'" class="hvr-float">View</a>
-            
-                        </div>
-                        <div class="card">
-                            <p>Extra Exams</p>
-                            <small><?php require"../../server/exam_numbers.php";?></small>
-                            <a href="../../exams?id='.$user_id.'" class="hvr-float">View</a>
-                        </div>
+                <main>
+                    <section class="sideBar">
+                        <li> <i class="fas fa-user fa-4x"></i> </li>
+                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-box"></i> Make suggestion</a></li>
+                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-question-circle"></i> Make request</a></li>
+                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-long-arrow-alt-left"></i> Back to website</a></li>
+                        <li> <a href="../../control/edit_email.php?id='.$user_id.'" class="hvr-underline-from-left"><i class="fas fa-envelope"></i> Change Email</a></li>
+                        <li> <a href="#" class="hvr-underline-from-left"><i class="far fa-question-circle"></i> Ask question</a></li>
+                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Exams</a></li>
+                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Assignments</a></li>
                         
-                        
-                    </div>
-                </div>
+                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-paper-plane"></i> Send Message</a></li>
+                        <li> <a href="../../logout" class="hvr-underline-from-left"><i class="fas fa-sign-out-alt" ></i> Logout</a></li>
+                    </section>
             
+                <section class="cards-container">
+            
+                    <div class="intro">
+            
+                        <img src="../../images/avatar.png" alt="" height="200" width="200">
+                        
+                        <h5><Span>Student Name :</Span> '.$username.' </h5>
+                        <h5><span>Adm no :</span> '.$adm_no.'</h5>
+            
+                    </div>
+            
+                    <div class="breadcrumbs">
+                        <div class="breadcrumb">
+                            <span>Messages :</span> <small> 2</small>
+                        </div>
+                        <div class="breadcrumb">
+                            <span>Announcements :</span> <small> 2</small>
+                        </div>
+                        <div class="breadcrumb">
+            
+                            <span>Assignments :</span> <small> <?php require "../../server/assignment_numbers.php";?></small>
+                        </div>
+                        <div class="breadcrumb">
+                            <span>Email :</span> <small> '.$student_email.'</small>
+                        </div>
+                        <div class="breadcrumb">
+                            <span>Exams :</span> <small> <?php require "../../server/exam_numbers.php";?></small>
+                        </div>
+                    </div>
+                </section>
+                </main>
+                
             </body>
-            </html>';
+            </html>
+            ';
             
             mkdir("../portals/$username");
             $file = fopen("../portals/$username/index.php","w");
