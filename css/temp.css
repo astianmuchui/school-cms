@@ -6,7 +6,7 @@ body{
 }
 header{
     width: 100%;
-    background-color: #00030a;
+    background-color: #85a3e9;
     display: inline-flex;
     color: White;
     height: 50px;
@@ -18,7 +18,11 @@ header{
     width: 300px;
     font-size: 25px;
     margin-top: 5px;
-    margin-left: 3px;
+    margin-left: 10px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #00030a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 header nav{
     display: inline-flex;
@@ -39,6 +43,18 @@ header nav ul{
 }
 header nav ul li{
     padding-left: 15px;
+}
+li img{
+    margin-top: -5px;
+}
+li i{
+    color: #000a0f;
+}
+li a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #00030a;
+    font-weight: 100;
+    font-size: 14px;
 }
 main{
     width: 100%;
@@ -95,7 +111,7 @@ main{
 }
 .panel{
     width: 85%;
-    background-color: #b8b8b8cc;
+    background-color: rgb(206, 206, 206);
     margin-left: 15%;
     height: 100vh;
     padding-top: 20px;
@@ -118,14 +134,14 @@ main{
     justify-content: center;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
+    grid-gap: 10px;
     flex-wrap: wrap;
-    margin-left: 10%;
+    margin-left: 1%;
 }
 .card{
     height: 200px;
-    width: 300px;
-    background-color: #2fa4e7;
+    width: 260px;
+    background-color: #85a3e9;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);   
     backdrop-filter: blur(40px);
     display: flex;
@@ -137,6 +153,7 @@ main{
     border-radius: 3px;
 
 }
+
 .card a{
     background-color: #00040e;
     margin: 30px 0;
@@ -154,7 +171,7 @@ main{
 .card small{
     color: rgb(0, 0, 0);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 13px;
     transform: rotate(1.2deg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -166,7 +183,7 @@ main{
     font-size: 14px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 5px;
-    background-color: #2fa4e7;
+    background-color: #91b2ff;
     color: #000000;
     width: max-content;
     margin-left: 8px;

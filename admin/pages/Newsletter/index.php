@@ -19,15 +19,11 @@
              $headers = "from:".$schoolName."<".$schoolEmail.">"."\r\n";
              $subject = $title;   
              foreach($users as $user):
-                $toEmail = $user['user_mail'];
+              $toEmail = $user['user_mail'];
               $nws = mail($toEmail,$subject,$message,$headers);
               set_time_limit(0);
               flush();
-                if($nws){
-                    return true;
-                }else{
-                    return false;
-                }
+                
             endforeach;
          }
 

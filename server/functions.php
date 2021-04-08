@@ -15,7 +15,7 @@
             $body = '
             <?php
                 require "../../server/db_pure.php";
-        
+                require "../../server/check_login.php";
             ?>
             <!DOCTYPE html>
             <html lang="en">
@@ -24,7 +24,9 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="../../javascript/font_awesome_main.js" crossorigin="anonymous"></script>
+                <link rel="stylesheet" href="../../css/hover.css">
                 <link rel="stylesheet" href="../../css/temp.css">
+                <link rel="stylesheet" href="../../css/font-awesome.min.css">
                 <title>'.$username.' | Portal</title>
             </head>
             <body>
@@ -35,9 +37,9 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#"><img src="../../images/avatar.png" alt="" width="30px" height="30px"></a></li>
+                            <li><a href="#"><img class="hvr-bob" src="../../images/avatar.png" alt="" width="30px" height="30px"></a></li>
                             <li><a href="#">'.$username.'</a></li>
-                             <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>   
+                             <li><a href="../../logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>   
 
                             
                         </ul>
@@ -57,17 +59,17 @@
                         <h3> '.$adm_no.'</h3>
                     </div>
                     <div class="back">
-                    <a href="#">  Go  back to website <i class="fas fa-arrow-right"></i></a>
-                </div> <br> <br>
+                    <a href="#" class="hvr-forward">  Go  back to website <i class="fas fa-arrow-right"></i></a>
+                </div> <br> 
                 <div class="back">
-                    <a href="#">Received Messages</a>
-                </div> <br> <br>
+                    <a href="#" class="hvr-forward">Received Messages</a>
+                </div> <br> 
                 <div class="back">
-                    <a href="../../suggestions?id='.$user_id.'">Make suggestion</a>
+                    <a href="../../suggestions?id='.$user_id.'" class="hvr-forward">Make suggestion</a>
                 </div>
-                <br> <br> 
+                <br> 
                 <div class="back">
-                    <a href="#">Ask question</a>
+                    <a href="#" class="hvr-forward">Ask question</a>
                 </div>
                 </div>
                 <div class="panel">
@@ -79,28 +81,20 @@
                             <p>Email Adress</p>
 
                             <small>'.$student_email.'</small>
-                            <a href="../../control/edit_email.php?id='.$user_id.'">change</a>
+                            <a href="../../control/edit_email.php?id='.$user_id.'" class="hvr-float">change</a>
                         </div>
                         <div class="card">
                             <p>Available Assignments</p>
                             <small><?php require "../../server/assignment_numbers.php";?></small>
-                            <a href="../../assignments/?id='.$user_id.'">View</a>
+                            <a href="../../assignments/?id='.$user_id.'" class="hvr-float">View</a>
             
                         </div>
                         <div class="card">
                             <p>Extra Exams</p>
                             <small><?php require"../../server/exam_numbers.php";?></small>
-                            <a href="../../exams?id='.$user_id.'">View</a>
+                            <a href="../../exams?id='.$user_id.'" class="hvr-float">View</a>
                         </div>
-                        <div class="card">
-                            <p>Assignments download rate</p>
-                            <meter min="0" max="100" value="90"></meter>
-                     </div>           
-                     <div class="card">
-                            <p> Exams download rate</p>
-                            <meter min="0" max="100" value="90"></meter>
                         
-                    </div>
                         
                     </div>
                 </div>

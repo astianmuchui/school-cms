@@ -45,7 +45,8 @@
                         $toEmail = $teacher['email'];
                         mail($toEmail,$subject,$body,$header);
                         set_time_limit(0);
-                          flush();
+                        flush();
+                        
                     endforeach;
                 }
                 echo "Server is processing request";

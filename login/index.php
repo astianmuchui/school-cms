@@ -1,13 +1,12 @@
 <?php
-    
+   session_start();     
     require '../admin/config.php';
     
-
+    $URL_ID = rand(500,1000000);
     
     function login($user_name,$pass_word){
         require '../admin/config.php';
-
-        global $errors;
+        global $errors,$URL_ID,$conn;
         $errors = array();
         if(empty($user_name)){
             echo 'Please Enter your username <br>';
@@ -16,26 +15,34 @@
             echo 'Password cannot be blank <br>';
         }
             if(!empty($user_name) && !empty($pass_word)){
-         
-                $query = "SELECT * FROM users";
-                $result = mysqli_query($conn,$query);
-                $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
-                
-                foreach($users as $user):
-                    $username = $user['username'];
-                    $password = $user['passcode'];
-                
-                if(($user_name == $username) && ($pass_word == $password)){
-                    
-                header("location: ../portals/$user_name");
-            }else{
-                
-            }
-        endforeach;
-        mysqli_free_result($result);
-                mysqli_close($conn);   
-        }
+              require '../admin/config.php';
+              
+              $query = "SELECT * FROM `users` WHERE username = '$user_name'";
+              $result = mysqli_query($conn,$query);
+              $user = mysqli_fetch_assoc($result);
+              mysqli_free_result($result);
+              mysqli_close($conn);
+              //Check if user exists
+              if($result == true){
+                  //User exists
+                $password = $user['passcode'];
+                $_SESSION['url_id'] = $URL_ID;
 
+                if($pass_word == $password){
+                    header("Location: ../portals/$user_name?id=$URL_ID");
+                }else{
+
+                  echo "Invalid Credentials";
+                  
+                }
+
+              }else{
+                echo 'Username does not exist';
+                mysqli_free_result($result);
+                mysqli_close($conn);
+              } 
+
+            }
 
     }
 
@@ -87,14 +94,16 @@
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" name="username">
+            <input type="text" id="myinput" class="form-control" name="username" autocomplete="off">
         </div>
         <div class="form-group">
             <label>Password</label>
-            <input type="text" class="form-control" name="password">
+            <input type="text" id="input" class="form-control" name="password" autocomplete="off">
         </div>
         <input type="submit" value="Login" class="form-control btn-primary" name="submit">
     </form>
+    <br>
+    <small>You will get redirected to your page automatically if the credentials are right</small>
     </div>
 </body>
 </html>

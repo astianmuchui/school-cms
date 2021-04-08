@@ -1,7 +1,6 @@
 <?php
-    session_start();
-    //Gate authentication mechanism 
-    
+        //Gate authentication mechanism 
+     session_start();
     $id =  rand(500,50000);
     $_SESSION['id'] = $id;
     $password = 12345;
@@ -64,11 +63,11 @@
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" name="username">
+            <input type="text" class="form-control" name="username" autocomplete="off">
         </div>
         <div class="form-group">
             <label>Password</label>
-            <input type="password" class="form-control" name="password">
+            <input type="password" class="form-control" name="password" autocomplete="off">
         </div>
         <input type="submit" value="Login" class="form-control btn-primary" name="submit">
     </form>
