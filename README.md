@@ -31,7 +31,7 @@ Can view all tables
 
 Has a small search engine for students table
 
-Has count of the entries for each table in the database
+Has count of the entries for each table in the database.
 
 Can make blogposts
 
