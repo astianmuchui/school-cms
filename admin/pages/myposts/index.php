@@ -1,5 +1,7 @@
 <?php
     require '../config.php';
+    require '../../checkers/check.php';
+
     $query = "SELECT * FROM blogposts ORDER BY id desc";
     $result = mysqli_query($conn,$query);
     $posts = mysqli_fetch_all($result,MYSQLI_ASSOC);

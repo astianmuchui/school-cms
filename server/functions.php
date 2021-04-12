@@ -39,6 +39,7 @@
             
                     <nav>
                         <ul>
+
                             <li><a href="../../logout/"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                             <li><a href="#"><i class="fas fa-long-arrow-alt-left"></i> Back to website</a></li>
                         </ul>
@@ -46,16 +47,17 @@
                 </header>
                 <main>
                     <section class="sideBar">
-                        <li> <i class="fas fa-user fa-4x"></i> </li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-box"></i> Make suggestion</a></li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-question-circle"></i> Make request</a></li>
+                        <li> <i class="fas fa-user fa-3x"></i>  </li>
+                        <li><a href="#" style="text-transform: uppercase;">'.$username.'</a></li>
+                        <li> <a href="../../suggestions/?id='.$user_id.'" class="hvr-underline-from-left"><i class="fas fa-box"></i> Make suggestion</a></li>
+                        <li> <a href="../../requests/?id='.$user_id.'" class="hvr-underline-from-left"><i class="fas fa-question-circle"></i> Make request</a></li>
                         <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-long-arrow-alt-left"></i> Back to website</a></li>
                         <li> <a href="../../control/edit_email.php?id='.$user_id.'" class="hvr-underline-from-left"><i class="fas fa-envelope"></i> Change Email</a></li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="far fa-question-circle"></i> Ask question</a></li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Exams</a></li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Assignments</a></li>
+                        <li> <a href="../../questions/?id='.$user_id.'" class="hvr-underline-from-left"><i class="far fa-question-circle"></i> Ask question</a></li>
+                        <li> <a href="../../exams/?id='.$user_id.'" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Exams</a></li>
+                        <li> <a href="../../assignments/?id='.$user_id.'" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Assignments</a></li>
                         
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-paper-plane"></i> Send Message</a></li>
+                        <li> <a href="../../message/?id='.$user_id.'" class="hvr-underline-from-left"><i class="fas fa-paper-plane"></i> Send Message</a></li>
                         <li> <a href="../../logout" class="hvr-underline-from-left"><i class="fas fa-sign-out-alt" ></i> Logout</a></li>
                     </section>
             
@@ -82,7 +84,7 @@
                             <span>Assignments :</span> <small> <?php require "../../server/assignment_numbers.php";?></small>
                         </div>
                         <div class="breadcrumb">
-                            <span>Email :</span> <small> '.$student_email.'</small>
+                             <small> '.$student_email.'</small>
                         </div>
                         <div class="breadcrumb">
                             <span>Exams :</span> <small> <?php require "../../server/exam_numbers.php";?></small>

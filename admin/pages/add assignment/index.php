@@ -1,5 +1,6 @@
 <?php    
     require '../config.php';
+    require '../../checkers/check.php';
     $errors = array();
     function insert($title,$document){
         global $errors,$conn;        
@@ -89,7 +90,7 @@
 </nav>
     <br> <br>
         <center class="container">  
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data" >
+        <form action="./index.php?id=<?php echo $_GET['id'];?>" method="post" enctype="multipart/form-data" >
             <div class="form-group">
             <label>Assignment Title</label> 
             <input type="text" name="title" class="form-control"> 

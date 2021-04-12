@@ -1,5 +1,6 @@
 <?php 
     require '../config.php';
+    require '../../checkers/check.php';
     $query = "SELECT * FROM teachers";
     $result = mysqli_query($conn,$query);
     $teachers = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -128,7 +129,7 @@
         <br> <br>
         <div class="container">
         <h4>Write Message</h4>
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+        <form action="./index.php?id=<?php echo $_GET['id'];?>" method="post">
             <div class="form-group">
             <label>Title</label>
             <input type="text" name="heading" id="" class="form-control">

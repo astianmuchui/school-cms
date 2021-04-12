@@ -1,6 +1,7 @@
 <?php
-    session_start();
+
     require '../config.php';
+    require '../../checkers/check.php';
     $query = 'SELECT * FROM users';
      $result = mysqli_query($conn,$query);
      $users = mysqli_fetch_all($result,MYSQLI_ASSOC);

@@ -1,14 +1,22 @@
 <?php
     require '../admin/config.php';
-    $id = $_GET['id'];
-    $query = "SELECT * FROM users WHERE users.user_id = $id";
+    if(isset($_GET['id'])){
+
+        $id = $_GET['id'];
+        $query = "SELECT * FROM users WHERE users.user_id = $id";
         $result = mysqli_query($conn,$query);
         $post = mysqli_fetch_assoc($result);
         mysqli_free_result($result);
         mysqli_close($conn); 
         $student = $post['username'];
+        if($post == true){
+
         //Validate form
-      if(isset($_POST['publish'])){
+
+          }else{
+            header("Location: ../login/");
+          }
+        if(isset($_POST['publish'])){
         $suggestion = $_POST['suggestion'];
         require '../admin/config.php';
         $query ="INSERT INTO suggestions(publisher,content) VALUES('$student','$suggestion')";
@@ -20,7 +28,11 @@
           echo 'Suggestion not published';
         }
       }
-?>
+
+    }else{
+      header("Location: ../login");
+    }
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">

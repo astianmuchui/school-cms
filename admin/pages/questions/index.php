@@ -1,5 +1,7 @@
 <?php 
     require '../../config.php';
+    require '../../checkers/check.php';
+
     $query = "SELECT * FROM questions ORDER BY id desc";
     $result = mysqli_query($conn,$query);
     $questions = mysqli_fetch_all($result,MYSQLI_ASSOC);

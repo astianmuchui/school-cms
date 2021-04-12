@@ -1,5 +1,6 @@
 <?php    
     require '../config.php';
+    require '../../checkers/check.php';
     $errors = array();
     function addExam($exam_name,$exam_document){
         global $errors,$conn;
@@ -84,7 +85,7 @@
 
 <br>
         <center class="container">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+        <form action="./index.php?id=<?php echo $_GET['id'];?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
             <label>Exam title</label> <br><br>
                 <input type="text" name="exam_title" class="form-control"> 

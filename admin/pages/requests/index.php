@@ -1,5 +1,6 @@
 <?php 
     require '../../config.php';
+    require '../../checkers/check.php';
     $query = "SELECT * FROM requests ORDER BY id desc";
     $result = mysqli_query($conn,$query);
     $requests = mysqli_fetch_all($result,MYSQLI_ASSOC);

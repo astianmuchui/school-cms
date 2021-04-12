@@ -1,5 +1,7 @@
 <?php 
     require '../config.php';
+    require '../../checkers/check.php';
+
     $errors = array();
     function upload($caption,$image){
         
@@ -89,7 +91,7 @@
     <div class="container">
 
         <h2>Add to gallery</h2>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+    <form action="./index.php?id=<?php echo $_GET['id'];?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
             <label>Caption</label> <br><br>
                 <input type="text" name="caption" class="form-control"> 

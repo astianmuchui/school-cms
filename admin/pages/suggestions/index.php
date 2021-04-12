@@ -1,5 +1,7 @@
 <?php
     require '../config.php';
+    require '../../checkers/check.php';
+
     $query = "SELECT * FROM suggestions ORDER BY id desc";
     $result = mysqli_query($conn,$query);
     $suggestions = mysqli_fetch_all($result,MYSQLI_ASSOC);

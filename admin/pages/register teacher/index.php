@@ -1,5 +1,6 @@
 <?php
     require "../config.php";
+    require '../../checkers/check.php';
     if(isset($_POST['register'])){
         $teacher = $_POST['teacher'];
         $teacherEmail = $_POST['email'];
@@ -43,7 +44,7 @@
 
 <br> <br>
 <div class="container">
-<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+<form action="./index.php?id=<?php echo $_GET['id'];?>" method="post">
   <div class="form-group">
   <label>Name</label>
   <input type="text" name="teacher" class="form-control" required>
@@ -63,7 +64,7 @@
             </select>
     </div>
     <div class="form-group">
-        <input type="submit" name="register" value="Post question" class="form-control btn btn-primary">
+        <input type="submit" name="register" value="Add teacher" class="form-control btn btn-primary">
     </div>
 </form>
 </div>

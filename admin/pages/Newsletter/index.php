@@ -1,5 +1,7 @@
 <?php
         require '../config.php';
+        require '../../checkers/check.php';
+
         $query = 'SELECT * FROM users';
         $result = mysqli_query($conn,$query);
         $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -123,7 +125,7 @@
 <br>
 <div class="container jumbotron" id="send">
     <h3>Write Email</h3>
-<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+<form action="./index.php?id=<?php echo $_GET['id'];?>" method="post">
 <div class="form-group">
     <label>Title</label>
     <input type="text" name="title" id="" class="form-control" required>

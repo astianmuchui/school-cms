@@ -1,5 +1,7 @@
 <?php
         require '../config.php';
+        require '../../checkers/check.php';
+
         $errors = array();
 
         function post($title,$image,$content,$author){
@@ -93,7 +95,7 @@
 
 
     <div class="container">
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
+        <form action="./index.php?id=<?php echo $_GET['id'];?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Title of post</label>
                 <input type="text" name="post_title" class="form-control">

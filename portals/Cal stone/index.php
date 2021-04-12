@@ -25,6 +25,7 @@
             
                     <nav>
                         <ul>
+
                             <li><a href="../../logout/"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                             <li><a href="#"><i class="fas fa-long-arrow-alt-left"></i> Back to website</a></li>
                         </ul>
@@ -32,16 +33,17 @@
                 </header>
                 <main>
                     <section class="sideBar">
-                        <li> <i class="fas fa-user fa-4x"></i> </li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-box"></i> Make suggestion</a></li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-question-circle"></i> Make request</a></li>
+                        <li> <i class="fas fa-user fa-3x"></i>  </li>
+                        <li><a href="#" style="text-transform: uppercase;">Cal stone</a></li>
+                        <li> <a href="../../suggestions/?id=14" class="hvr-underline-from-left"><i class="fas fa-box"></i> Make suggestion</a></li>
+                        <li> <a href="../../requests/?id=14" class="hvr-underline-from-left"><i class="fas fa-question-circle"></i> Make request</a></li>
                         <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-long-arrow-alt-left"></i> Back to website</a></li>
                         <li> <a href="../../control/edit_email.php?id=14" class="hvr-underline-from-left"><i class="fas fa-envelope"></i> Change Email</a></li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="far fa-question-circle"></i> Ask question</a></li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Exams</a></li>
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Assignments</a></li>
+                        <li> <a href="../../questions/?id=14" class="hvr-underline-from-left"><i class="far fa-question-circle"></i> Ask question</a></li>
+                        <li> <a href="../../exams/?id=14" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Exams</a></li>
+                        <li> <a href="../../assignments/?id=14" class="hvr-underline-from-left"><i class="fas fa-file"></i> My Assignments</a></li>
                         
-                        <li> <a href="#" class="hvr-underline-from-left"><i class="fas fa-paper-plane"></i> Send Message</a></li>
+                        <li> <a href="../../message/?id=14" class="hvr-underline-from-left"><i class="fas fa-paper-plane"></i> Send Message</a></li>
                         <li> <a href="../../logout" class="hvr-underline-from-left"><i class="fas fa-sign-out-alt" ></i> Logout</a></li>
                     </section>
             

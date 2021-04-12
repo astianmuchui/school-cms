@@ -1,16 +1,40 @@
 <?php
+
+  
     require '../admin/config.php';
-    if(isset($_POST['request'])){
+
+    if(isset($_GET['id'])){
+      require '../admin/config.php';
+      $id = $_GET['id'];
+      $query = "SELECT * FROM users WHERE users.user_id = $id";
+      $result = mysqli_query($conn,$query);
+      $post = mysqli_fetch_assoc($result);
+      mysqli_free_result($result);
+      mysqli_close($conn); 
+      $student = $post['username'];
+      if($post == true){
+
+      //Validate form
+      if(isset($_POST['request'])){
+      require '../admin/config.php';
         $studentName = $_POST['student'];
         $requestType = $_POST['requesttype'];
         $requestSubject = $_POST['requestsubject'];
-
         $query = "INSERT INTO requests(name,type,subject) VALUES('$studentName','$requestType','$requestSubject')";
         $action = mysqli_query($conn,$query);
         if($action){
             echo 'Request Made';
         }
     }
+
+
+        }else{
+          header("Location: ../login/");
+        }
+    }else{
+      header("Location: ../login/");
+    }
+    
 ?>
 
 
@@ -45,10 +69,10 @@
 
 <br> <br>
 <div class="container">
-<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+<form action="./index.php?id=<?php echo $id;?>" method="post">
   <div class="form-group">
   <label>Name</label>
-  <input type="text" name="student" class="form-control" required>
+  <input type="text" name="student" value="<?php echo $post['username']?>"  class="form-control" required>
   </div>
 
     <div class="form-group">

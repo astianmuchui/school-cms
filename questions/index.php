@@ -1,16 +1,47 @@
 <?php
     require '../admin/config.php';
-    if(isset($_POST['ask'])){
-        $studentName = $_POST['student'];
-        $question = $_POST['question'];
-        $email = $_POST['mail'];
-        $query = "INSERT INTO questions (username,user_email,qtn) VALUES('$studentName','$email','$question')";
-        $action = mysqli_query($conn,$query);
-        if($action){
-            echo 'Question posted';
-        }
+
+    if(isset($_GET['id'])){
+
+      $id = $_GET['id'];
+
+      $query = "SELECT * FROM users WHERE users.user_id = $id";
+      $result = mysqli_query($conn,$query);
+      $post = mysqli_fetch_assoc($result);
+      mysqli_free_result($result);
+      mysqli_close($conn); 
+      $student = $post['username'];
+
+      if($post == true){
+        
+        
+      
+        if(isset($_POST['ask'])){
+          require '../admin/config.php';
+  
+          $studentName = $_POST['student'];
+          $question = $_POST['question'];
+          $email = $_POST['mail'];
+          $query = "INSERT INTO questions (username,user_email,qtn) VALUES('$studentName','$email','$question')";
+          $action = mysqli_query($conn,$query);
+          if($action){
+              echo 'Question posted';
+          }
+      }
+  
+
+
+        #
+      }
+
+      
+
+      //
+    }else{
+      header("Location: ../login/");
     }
 
+    
 
 ?>
 
@@ -49,14 +80,14 @@
 
 <br>
 <div class="container">
-<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+<form action="./index.php?id=<?php echo $id;?>" method="post">
   <div class="form-group">
   <label>Your Name</label>
-  <input type="text" name="student" class="form-control" required>
+  <input type="text" name="student" value="<?php echo $post['username'];?>" class="form-control" required>
   </div>
     <div class="form-group">
         <label>Your Email</label>
-        <input type="email" name="mail" class="form-control" required>
+        <input type="email" name="mail" class="form-control" value="<?php echo $post['user_mail'];?>" required>
     </div>
     <div class="form-group">
         <label>Write your question</label>
