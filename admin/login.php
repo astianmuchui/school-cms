@@ -1,6 +1,5 @@
 <?php
-        //Gate authentication mechanism 
-     session_start();
+    session_start();
     $id =  rand(500,50000);
     $_SESSION['id'] = $id;
     $password = 12345;
@@ -10,7 +9,6 @@
         global $username,$password,$id;
         switch ($password) {
             case 12345:
-                
             header("Location: ./index.php?id=$id");
             break;
 

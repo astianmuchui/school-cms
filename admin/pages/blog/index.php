@@ -61,6 +61,7 @@
             post($title,$image,$content,$author);
             
         }
+
 ?>
 
 
